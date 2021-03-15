@@ -1,7 +1,0 @@
-name: amelia
-channels:
-  - defaults
-dependencies:
-  - pip=21.0.1
-  - python=3.6.13
-  - flask=1.1.2

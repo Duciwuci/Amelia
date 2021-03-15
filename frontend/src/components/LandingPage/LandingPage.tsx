@@ -24,41 +24,11 @@ class LandingPage extends Component {
         </div>
         <MainHeader />
 
-        <img src={trump} className="img-class" />
         <Card
           title="We did it!"
           description="It's an awesome App! Use it, download it, but more, enjoy it! - Donald Trump"
-        />
-
-        <img src={trump} className="img-class" />
-        <Card
-          title="We did it!"
-          description="It's an awesome App! Use it, download it, but more, enjoy it! - Donald Trump"
-        />
-
-        <img src={trump} className="img-class" />
-        <Card
-          title="We did it!"
-          description="It's an awesome App! Use it, download it, but more, enjoy it! - Donald Trump"
-        />
-
-        <img src={trump} className="img-class" />
-        <Card
-          title="We did it!"
-          description="It's an awesome App! Use it, download it, but more, enjoy it! - Donald Trump"
-        />
-
-        <img src={trump} className="img-class" />
-        <Card
-          title="We did it!"
-          description="It's an awesome App! Use it, download it, but more, enjoy it! - Donald Trump"
-        />
-
-        <img src={trump} className="img-class" />
-        <Card
-          title="We did it!"
-          description="It's an awesome App! Use it, download it, but more, enjoy it! - Donald Trump"
-        />
+          img={trump}
+          />
       </div>
     );
   }
@@ -93,11 +63,13 @@ const MainHeader = () => {
 
 interface CardProps {
   title: string;
+  img: string;
   description: string;
 }
 const Card = (props: CardProps) => {
   return (
     <div className="main-header">
+      <img src={props.img} className="img-class" />
       <h3>{props.title}</h3>
       <p>{props.description}</p>
     </div>

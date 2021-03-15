@@ -2,7 +2,7 @@ FROM python:3.7-slim
 WORKDIR /
 
 # Install dependencies
-COPY requirements.txt .
+COPY backend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy source code

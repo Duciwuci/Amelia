@@ -1,13 +1,15 @@
-name: build
 on: [push]
+
 jobs:
   build-frontend:
     runs-on: ubuntu-latest
+    name: Build our Frontend -> CI/CD
     steps:
-      - uses: ./.github/actions/frontend
-      - run: docker
+    - name: Build Frontend
+      uses: ./.github/actions/frontend
   build-backend:
     runs-on: ubuntu-latest
+    name: Build our Backend -> CI/CD
     steps:
-      - uses: ./.github/actions/backend
-      - run: docker
+    - name: Build Backend
+      uses: ./.github/actions/backend

@@ -2,4 +2,4 @@ name: 'Build Backend'
 description: 'To be sure it builds'
 runs:
   using: 'docker'
-  image: './backend/Dockerfile'
+  image: 'backend/Dockerfile'

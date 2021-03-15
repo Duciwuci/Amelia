@@ -15,7 +15,7 @@ COPY tsconfig.json /
 RUN yarn run build
 
 # Application port (optional)
-EXPOSE 5000
+# EXPOSE 5000
 
 ## Container start command
-CMD ["yarn", "start"]
+# CMD ["yarn", "start"]

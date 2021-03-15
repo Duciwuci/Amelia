@@ -3,13 +3,15 @@ on: [push]
 jobs:
   build-frontend:
     runs-on: ubuntu-latest
-    name: Build our Frontend -> CI/CD
+    name: Build our Frontend
     steps:
+    - uses: actions/checkout@v1
     - name: Build Frontend
       uses: ./.github/actions/frontend
   build-backend:
     runs-on: ubuntu-latest
-    name: Build our Backend -> CI/CD
+    name: Build our Backend
     steps:
+    - uses: actions/checkout@v1
     - name: Build Backend
       uses: ./.github/actions/backend

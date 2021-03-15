@@ -1,5 +1,5 @@
 FROM python:3.7-slim
-WORKDIR /backend
+WORKDIR /
 
 # Install dependencies
 COPY requirements.txt .

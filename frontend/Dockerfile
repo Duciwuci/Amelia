@@ -2,7 +2,7 @@
 FROM node:lts-alpine AS build-stage
 
 # Set working directory
-WORKDIR /frontend
+WORKDIR /
 
 # Add package.json to WORKDIR and install dependencies
 COPY package*.json /

@@ -1,0 +1,14 @@
+name: build
+on: [push]
+jobs:
+  build-frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/frontend
+      - run: docker
+  build-backend:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/backend
+      - run: docker
+      

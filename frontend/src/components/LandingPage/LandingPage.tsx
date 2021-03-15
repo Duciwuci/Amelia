@@ -1,8 +1,13 @@
 import React, { Component } from "react";
-import { InoCarousel, InoCarouselSlide } from "@inovex.de/elements-react";
+import {
+  InoCarousel,
+  InoCarouselSlide,
+  InoCard,
+} from "@inovex.de/elements-react";
 import carusselelem1 from "./LandingPageImages/carussel1.jpeg";
 import carusselelem2 from "./LandingPageImages/carussel2.jpeg";
 import carusselelem3 from "./LandingPageImages/carussel3.jpeg";
+import trump from "./LandingPageImages/trump.jpeg";
 import "./LandingPage.css";
 
 class LandingPage extends Component {
@@ -17,6 +22,43 @@ class LandingPage extends Component {
             <InoCarouselSlide value={"3"} src={carusselelem3} />
           </InoCarousel>
         </div>
+        <MainHeader />
+
+        <img src={trump} className="img-class" />
+        <Card
+          title="We did it!"
+          description="It's an awesome App! Use it, download it, but more, enjoy it! - Donald Trump"
+        />
+
+        <img src={trump} className="img-class" />
+        <Card
+          title="We did it!"
+          description="It's an awesome App! Use it, download it, but more, enjoy it! - Donald Trump"
+        />
+
+        <img src={trump} className="img-class" />
+        <Card
+          title="We did it!"
+          description="It's an awesome App! Use it, download it, but more, enjoy it! - Donald Trump"
+        />
+
+        <img src={trump} className="img-class" />
+        <Card
+          title="We did it!"
+          description="It's an awesome App! Use it, download it, but more, enjoy it! - Donald Trump"
+        />
+
+        <img src={trump} className="img-class" />
+        <Card
+          title="We did it!"
+          description="It's an awesome App! Use it, download it, but more, enjoy it! - Donald Trump"
+        />
+
+        <img src={trump} className="img-class" />
+        <Card
+          title="We did it!"
+          description="It's an awesome App! Use it, download it, but more, enjoy it! - Donald Trump"
+        />
       </div>
     );
   }
@@ -37,24 +79,27 @@ const Header = () => {
   );
 };
 
+const MainHeader = () => {
+  return (
+    <div className="main-header">
+      <h2>Why use this Platform</h2>
+      <p>
+        This platform offers you an effective way to learn with real stories and
+        catching tasks!
+      </p>
+    </div>
+  );
+};
+
 interface CardProps {
-  className: string;
   title: string;
-  img: string;
   description: string;
 }
 const Card = (props: CardProps) => {
   return (
-    <div className={props.className}>
-      <div className="small-div">
-        <i className={props.className}></i>
-      </div>
-
-      <div className="big-div">
-        <span className="div-title">{props.title}</span>
-        <br />
-        <span>{props.description}</span>
-      </div>
+    <div className="main-header">
+      <h3>{props.title}</h3>
+      <p>{props.description}</p>
     </div>
   );
 };

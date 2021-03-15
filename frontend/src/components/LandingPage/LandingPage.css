@@ -40,3 +40,15 @@
   margin: auto;
   margin-top: 9rem;
 }
+
+.main-header {
+  margin: auto;
+  margin-top: 2rem;
+  width: 20rem;
+}
+
+.img-class {
+  width: 20rem;
+  margin: auto;
+  margin-top: 2rem;
+}

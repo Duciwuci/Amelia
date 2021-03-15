@@ -6,7 +6,7 @@ COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy source code
-COPY ./src /src
+COPY ./backend/src /src
 
 # set PYTHONPATH
 ENV PYTHONPATH /

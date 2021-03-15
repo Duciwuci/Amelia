@@ -5,13 +5,13 @@ FROM node:lts-alpine AS build-stage
 WORKDIR /
 
 # Add package.json to WORKDIR and install dependencies
-COPY package*.json /
+COPY frontend/package*.json /
 RUN yarn install
 
 # Add source code files to WORKDIR, copy tsconfig.json and run build
-COPY src ./src
-COPY public ./public
-COPY tsconfig.json /
+COPY frontend/src ./src
+COPY frontend/public ./public
+COPY frontend/tsconfig.json /
 RUN yarn run build
 
 # Application port (optional)

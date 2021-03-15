@@ -1,12 +1,12 @@
 FROM python:3.7-slim
-WORKDIR /
+WORKDIR /backend
 
 # Install dependencies
-COPY backend/requirements.txt .
+COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy source code
-COPY ./backend/src /src
+COPY ./src /src
 
 # set PYTHONPATH
 ENV PYTHONPATH /

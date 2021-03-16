@@ -47,7 +47,7 @@ class LandingPage extends Component {
   }
 }
 
-const Header = () => {
+export const Header = () => {
   return (
     <div className="Header">
       <div className="header-div">

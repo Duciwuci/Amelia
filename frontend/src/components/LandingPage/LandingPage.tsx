@@ -1,13 +1,10 @@
 import React, { Component } from "react";
-import {
-  InoCarousel,
-  InoCarouselSlide,
-  InoCard,
-} from "@inovex.de/elements-react";
+import { InoCarousel, InoCarouselSlide } from "@inovex.de/elements-react";
 import carusselelem1 from "./LandingPageImages/carussel1.jpeg";
 import carusselelem2 from "./LandingPageImages/carussel2.jpeg";
 import carusselelem3 from "./LandingPageImages/carussel3.jpeg";
 import trump from "./LandingPageImages/trump.jpeg";
+import YouTube from "react-youtube";
 import "./LandingPage.css";
 
 class LandingPage extends Component {
@@ -28,7 +25,23 @@ class LandingPage extends Component {
           title="We did it!"
           description="It's an awesome App! Use it, download it, but more, enjoy it! - Donald Trump"
           img={trump}
-          />
+        />
+        <div className="video">
+          <YouTube videoId="jRKF83_INB8" />
+        </div>
+
+        <div className="citate-div">
+          <p className="citate">
+            {" "}
+            "Ich werde für immer glücklich und klug sein." - Duc Viet Mai{" "}
+          </p>
+        </div>
+
+        <div className="video">
+          <button className="sign-in-button">LogIn</button>
+        </div>
+        <br />
+        <br />
       </div>
     );
   }

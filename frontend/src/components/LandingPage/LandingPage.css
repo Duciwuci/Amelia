@@ -53,3 +53,19 @@
   margin: auto;
   margin-top: 2rem;
 }
+
+.video {
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.citate-div {
+  margin: auto;
+  margin-top: 2rem;
+}
+
+.citate {
+  font-style: italic;
+  font-size: large;
+  color: blue;
+}

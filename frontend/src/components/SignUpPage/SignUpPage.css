@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 body {
-  background: #1c8ef9 !important;
   min-height: 100vh;
   display: flex;
   font-weight: 400;
@@ -81,4 +80,19 @@ html,
 
 .forgot-password a {
   color: #167bff;
+}
+
+.first {
+  margin: auto;
+  margin-top: 9rem;
+  width: 25rem;
+}
+
+.form-class {
+  width: 45rem;
+}
+
+.flex-child {
+  margin: auto;
+  margin-top: 2rem;
 }

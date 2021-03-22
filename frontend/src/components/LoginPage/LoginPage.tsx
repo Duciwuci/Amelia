@@ -10,7 +10,18 @@ interface Properties {
   update(name: string): void;
 }
 
-export default class Login extends Component<Properties, {}> {
+interface State {
+  username: string;
+}
+
+export default class Login extends Component<Properties, State> {
+  constructor(props: Properties) {
+    super(props);
+    this.state = {
+      username: "",
+    };
+  }
+
   render() {
     return (
       <div className="flex-column">
@@ -21,11 +32,12 @@ export default class Login extends Component<Properties, {}> {
             <h3>Sign In</h3>
 
             <div className="form-group">
-              <label>Email address</label>
+              <label>Username</label>
               <input
-                type="email"
                 className="form-control"
-                placeholder="Enter email"
+                placeholder="Enter username"
+                onChange={(e) => this.setState({ username: e.target.value })}
+                value={this.state.username}
               />
             </div>
 
@@ -51,7 +63,11 @@ export default class Login extends Component<Properties, {}> {
               </div>
             </div>
 
-            <button type="submit" className="btn btn-primary btn-block">
+            <button
+              type="submit"
+              className="btn btn-primary btn-block"
+              onClick={(e) => this.props.update(this.state.username)}
+            >
               Submit
             </button>
             <p className="forgot-password text-right">

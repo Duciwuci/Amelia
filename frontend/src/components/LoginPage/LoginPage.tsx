@@ -6,7 +6,11 @@ import GoogleButton from "react-google-button";
 import "../SignUpPage/SignUpPage.css";
 import "../LandingPage/LandingPage.css";
 
-export default class Login extends Component {
+interface Properties {
+  update(name: string): void;
+}
+
+export default class Login extends Component<Properties, {}> {
   render() {
     return (
       <div className="flex-column">
@@ -71,7 +75,7 @@ export default class Login extends Component {
           />
         </div>
         <div className="flex-child">
-        <button className="sign-in-button">Sign Up</button>
+          <button className="sign-in-button">Sign Up</button>
         </div>
       </div>
     );

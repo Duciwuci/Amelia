@@ -14,15 +14,15 @@ interface State {
   username: string;
 }
 
-export default class Login extends Component<Properties, State> {
-  constructor(props: Properties) {
+export class LoginPage extends Component<Properties, State> {
+  public constructor(props: Properties) {
     super(props);
     this.state = {
       username: "",
     };
   }
 
-  render() {
+  public render() {
     return (
       <div className="flex-column">
         <Header />

@@ -11,7 +11,7 @@ export default class Login extends Component {
     return (
       <div className="flex-column">
         <Header />
-        <img src={carusselelem3} className="first" />
+        <img src={carusselelem3} alt="" className="first" />
         <div className="flex-child">
           <form className="form-class">
             <h3>Sign In</h3>
@@ -51,6 +51,7 @@ export default class Login extends Component {
               Submit
             </button>
             <p className="forgot-password text-right">
+              {/* eslint-disable-next-line */}
               Forgot <a href="#">password?</a>
             </p>
           </form>
@@ -71,7 +72,7 @@ export default class Login extends Component {
           />
         </div>
         <div className="flex-child">
-        <button className="sign-in-button">Sign Up</button>
+          <button className="sign-in-button">Sign Up</button>
         </div>
       </div>
     );

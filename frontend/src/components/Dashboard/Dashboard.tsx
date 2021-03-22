@@ -1,38 +1,41 @@
 import React from "react";
 
+import Carousel from "./Carousel/Carousel";
 import "./Dashboard.css";
 import "../LandingPage/LandingPage.css";
 
 export class Dashboard extends React.Component {
-
-    public render() {
-        return <div className="flex-column">
-            <Header />
-            <MainHeader />
-        </div>
-    }
+  public render() {
+    return (
+      <div className="flex-column">
+        <Header />
+        <MainHeader />
+        <Carousel />
+      </div>
+    );
+  }
 }
 
 const Header = () => {
-    return (
-      <div className="Header">
-        <div className="header-div">
-          <span className="header-title">Amelia</span>
-          <br />
-          <span className="header-text">Telling Stories to Learn ...</span>
-        </div>
-        <div className="button-div">
-          <button className="sign-in-button">Log Out</button>
-        </div>
+  return (
+    <div className="Header">
+      <div className="header-div">
+        <span className="header-title">Amelia</span>
+        <br />
+        <span className="header-text">Telling Stories to Learn ...</span>
       </div>
-    );
-  };
-
-  const MainHeader = () => {
-      return <div className="main-header first">
-      <h2>Welcome, Amelia!</h2>
-      <h4>
-        Your progress: 
-      </h4>
+      <div className="button-div">
+        <button className="sign-in-button">Log Out</button>
+      </div>
     </div>
-  }
+  );
+};
+
+const MainHeader = () => {
+  return (
+    <div className="main-header first">
+      <h2>Welcome, Amelia!</h2>
+      <h4>Your progress:</h4>
+    </div>
+  );
+};

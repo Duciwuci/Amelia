@@ -4,7 +4,8 @@ import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import LandingPage from "./components/LandingPage/LandingPage";
-import {LoginPage} from "./components/LoginPage/LoginPage";
+import { LoginPage } from "./components/LoginPage/LoginPage";
+import { StoryMap } from "./components/StoryMap/StoryMap";
 
 interface State {
   isLoggedIn: boolean;
@@ -31,6 +32,7 @@ class App extends React.Component<{}, State> {
           {!this.state.isLoggedIn && (
             <div>
               <Route exact path="/" component={LandingPage} />
+              <Route exact path="/story" component={StoryMap} />
               <Route
                 exact
                 path="/login"
@@ -40,7 +42,7 @@ class App extends React.Component<{}, State> {
           )}
           {this.state.isLoggedIn && (
             <div>
-              <Route exact path="/" component={LandingPage} />
+              <Route exact path="/login" component={StoryMap} />
               <Route exact path="/hello" component={LandingPage} />
             </div>
           )}

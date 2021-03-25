@@ -1,6 +1,6 @@
+import React, {Component} from "react";
 // @ts-ignore
 import {InoImg, InoList, InoListItem } from "@inovex.de/elements-react";
-import React, {Component} from "react";
 import './DashboardPage.css'
 // @ts-ignore
 import chartImg from '../DashboardPage/DashboardPageImages/charts.png';
@@ -8,6 +8,8 @@ import chartImg from '../DashboardPage/DashboardPageImages/charts.png';
 import studensImg from '../DashboardPage/DashboardPageImages/studensWalk.jpg';
 // @ts-ignore
 import { InoIconButton } from '@inovex.de/elements-react';
+import styled from 'styled-components';
+import { TextField } from "@material-ui/core";
 
 export default class Dashboard extends Component {
     state = {
@@ -50,7 +52,7 @@ export default class Dashboard extends Component {
                     </InoList>
                 </div>
                 <div className="image-box">
-                    <InoImg src={chartImg} ino-ratio-width="1280" ino-ratio-height="941" ino-img-list-item></InoImg>
+                    <img src={chartImg}></img>
                 </div>
                 <div className="text-boxes">
                     <InoList inoAvatar>
@@ -65,7 +67,7 @@ export default class Dashboard extends Component {
                     </InoList>
                 </div>
                 <div className="small-image-box">
-                    <InoImg src={studensImg} ino-ratio-width="1920" ino-ratio-height="1280" ino-rounded={true} ino-img-list-item> </InoImg>
+                    <img src={studensImg}></img>
                 </div>
                 <div className="text-boxes">
                     <InoList inoAvatar>
@@ -79,38 +81,80 @@ export default class Dashboard extends Component {
                         </InoListItem>
                     </InoList>
                 </div>
-
-                <div className="text-boxes">
-                    <InoList inoAvatar>
-                        <InoListItem inoText= {this.state.mentorMsg}>
-                            <InoImg
-                                slot="ino-leading"
-                                src="https://cdn-images-1.medium.com/max/1600/1*HP8l7LMMt7Sh5UoO1T-yLQ.png"
-                                ino-ratio-width="1"
-                                ino-ratio-height="1"
-                              />
-                        </InoListItem>
-                    </InoList>
+                <div className="button-boxes">
+                    <div className="button-class">
+                        <Button>{this.state.pathMsg}</Button>
+                    </div>
+                        <Wrapper>
+                        <Title>{dummytext}</Title>
+                    </Wrapper>
                 </div>
-                <div className="text-boxes">
-                    <InoList inoAvatar>
-                        <InoListItem inoText={this.state.pathMsg}>
-                            <InoImg
-                                slot="ino-leading"
-                                src="https://cdn-images-1.medium.com/max/1600/1*HP8l7LMMt7Sh5UoO1T-yLQ.png"
-                                ino-ratio-width="1"
-                                ino-ratio-height="1"
-                              />
-                        </InoListItem>
-                    </InoList>
+                <div className="button-boxes">
+                    <div className="button-class">
+                        <Button>{this.state.pathMsg}</Button>
+                    </div>
+                        <Wrapper>
+                        <Title>{dummytext}</Title>
+                    </Wrapper>
+                </div>
+                <div className="button-boxes">
+                    <div className="button-class">
+                        <Button>{this.state.pathMsg}</Button>
+                    </div>
+                        <Wrapper>
+                        <Title>{dummytext}</Title>
+                    </Wrapper>
                 </div>
                 <div className="icon-button">
-                     <InoIconButton inoIcon="search" onClick={this.handleClick} />;
+                     <InoIconButton inoIcon="arrow_up" onClick={this.handleClick} />
                 </div>
             </div>
         );
     }
 }
+
+const dummytext = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam';
+
+const Button = styled.button`
+  color: palevioletred;
+  font-size: 1em;
+  margin: 0 auto;
+  left: 50%;
+  display: block;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+  width: 100%;
+
+`;
+
+const Textfield = styled.text`
+    color: palevioletred;
+    padding: 0.25em 1em;
+`;
+
+// Create a Title component that'll render an <h1> tag with some styles
+const Title = styled.h1`
+  font-size: 2vw;
+  text-align: center;
+  color: palevioletred;
+`;
+
+// Create a Wrapper component that'll render a <section> tag with some styles
+const Wrapper = styled.section`
+  padding: 4em;
+  background: papayawhip;
+  @media screen and (max-width:1166px){
+      padding:50px;
+  }
+  @media screen and (max-width:1024px){
+    padding:40px;
+}
+@media screen and (max-width:767px){
+    padding:20px;
+}
+`;
+
 export const Header = () => {
   return (
     <div className="Header">
@@ -125,4 +169,6 @@ export const Header = () => {
       </div>
     </div>
   );
+
+
 };

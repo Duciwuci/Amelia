@@ -1,10 +1,12 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import carusselelem3 from "../LandingPage/LandingPageImages/carussel3.jpeg";
 import { GoogleLogin } from "react-google-login";
 import GoogleButton from "react-google-button";
 import "../SignUpPage/SignUpPage.css";
 import "../LandingPage/LandingPage.css";
+import { Button } from "@material-ui/core";
 
 interface Properties {
   update(name: string): void;
@@ -26,7 +28,7 @@ export class LoginPage extends Component<Properties, State> {
     return (
       <div className="flex-column">
         <Header />
-        <img src={carusselelem3} className="first" />
+        <img alt="" src={carusselelem3} className="first" />
         <div className="flex-child">
           <form className="form-class">
             <h3>Sign In</h3>
@@ -63,14 +65,17 @@ export class LoginPage extends Component<Properties, State> {
               </div>
             </div>
 
-            <button
-              type="submit"
-              className="btn btn-primary btn-block"
-              onClick={(e) => this.props.update(this.state.username)}
-            >
-              Submit
-            </button>
+            <Link to="/">
+              <button
+                type="submit"
+                className="btn btn-primary btn-block"
+                onClick={(e) => this.props.update(this.state.username)}
+              >
+                Submit
+              </button>
+            </Link>
             <p className="forgot-password text-right">
+              {/* eslint-disable-next-line  */}
               Forgot <a href="#">password?</a>
             </p>
           </form>
@@ -107,7 +112,15 @@ const Header = () => {
         <span className="header-text">Telling Stories to Learn ...</span>
       </div>
       <div className="button-div">
-        <button className="sign-in-button">Home</button>
+        <Link to="/">
+          <Button
+            className="sign-in-button"
+            variant="contained"
+            color="secondary"
+          >
+            Home
+          </Button>
+        </Link>
       </div>
     </div>
   );

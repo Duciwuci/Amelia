@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import { InoCarousel, InoCarouselSlide } from "@inovex.de/elements-react";
 import carusselelem1 from "./LandingPageImages/carussel1.jpeg";
 import carusselelem2 from "./LandingPageImages/carussel2.jpeg";
@@ -6,6 +7,7 @@ import carusselelem3 from "./LandingPageImages/carussel3.jpeg";
 import trump from "./LandingPageImages/trump.jpeg";
 import YouTube from "react-youtube";
 import "./LandingPage.css";
+import { Button } from "@material-ui/core";
 
 class LandingPage extends Component {
   public render() {
@@ -56,7 +58,15 @@ export const Header = () => {
         <span className="header-text">Telling Stories to Learn ...</span>
       </div>
       <div className="button-div">
-        <button className="sign-in-button">LogIn</button>
+        <Link to="/login">
+          <Button
+            variant="contained"
+            color="secondary"
+            className="sign-in-button"
+          >
+            LogIn
+          </Button>
+        </Link>
       </div>
     </div>
   );
@@ -82,7 +92,7 @@ interface CardProps {
 const Card = (props: CardProps) => {
   return (
     <div className="main-header">
-      <img src={props.img} className="img-class" />
+      <img alt="" src={props.img} className="img-class" />
       <h3>{props.title}</h3>
       <p>{props.description}</p>
     </div>

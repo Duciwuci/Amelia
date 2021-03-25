@@ -19,6 +19,7 @@ class App extends React.Component<{}, State> {
       isLoggedIn: false,
       username: "",
     };
+    this.login = this.login.bind(this);
   }
 
   private login(name: string) {
@@ -36,13 +37,13 @@ class App extends React.Component<{}, State> {
               <Route
                 exact
                 path="/login"
-                component={LoginPage.bind(this.login)}
+                render={() => <LoginPage update={this.login} />}
               />
             </div>
           )}
           {this.state.isLoggedIn && (
             <div>
-              <Route exact path="/login" component={StoryMap} />
+              <Route exact path="/" component={StoryMap} />
               <Route exact path="/hello" component={LandingPage} />
             </div>
           )}

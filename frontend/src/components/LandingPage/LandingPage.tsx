@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { InoCarousel, InoCarouselSlide } from "@inovex.de/elements-react";
+import { InoButton, InoCarousel, InoCarouselSlide } from "@inovex.de/elements-react";
 import carusselelem1 from "./LandingPageImages/carussel1.jpeg";
 import carusselelem2 from "./LandingPageImages/carussel2.jpeg";
 import carusselelem3 from "./LandingPageImages/carussel3.jpeg";
@@ -8,15 +8,16 @@ import YouTube from "react-youtube";
 import "./LandingPage.css";
 
 class LandingPage extends Component {
+
   public render() {
     return (
       <div className="flex-column">
         <Header />
         <div className="carousel">
-          <InoCarousel inoAutoplay={true}>
-            <InoCarouselSlide value={"1"} src={carusselelem1} />
-            <InoCarouselSlide value={"2"} src={carusselelem2} />
-            <InoCarouselSlide value={"3"} src={carusselelem3} />
+          <InoCarousel value="0" inoAnimated={true} inoInfinite={true}>
+            <InoCarouselSlide value="0" src={carusselelem1} />
+            <InoCarouselSlide value="1" src={carusselelem2} />
+            <InoCarouselSlide value="2" src={carusselelem3} />
           </InoCarousel>
         </div>
         <MainHeader />
@@ -82,7 +83,7 @@ interface CardProps {
 const Card = (props: CardProps) => {
   return (
     <div className="main-header">
-      <img src={props.img} className="img-class" />
+      <img src={props.img} alt="" className="img-class" />
       <h3>{props.title}</h3>
       <p>{props.description}</p>
     </div>

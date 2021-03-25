@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import LandingPage from "./components/LandingPage/LandingPage";
 import LoginPage from "./components/LoginPage/LoginPage";
-import DashboardPage from "./components/DashboardPage/DashboardPage";
+import { Dashboard } from "./components/Dashboard/Dashboard";
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={LandingPage} />
         <Route exact path="/login" component={LoginPage} />
-        <Route exact path="/dashboard" component={DashboardPage}/>
+        <Route exact path="/dashboard" component={Dashboard} />
       </Switch>
     </Router>
   );

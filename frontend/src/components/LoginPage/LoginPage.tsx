@@ -1,27 +1,45 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import carusselelem3 from "../LandingPage/LandingPageImages/carussel3.jpeg";
 import { GoogleLogin } from "react-google-login";
 import GoogleButton from "react-google-button";
 import "../SignUpPage/SignUpPage.css";
 import "../LandingPage/LandingPage.css";
+import { Button } from "@material-ui/core";
 
-export default class Login extends Component {
-  render() {
+interface Properties {
+  update(name: string): void;
+}
+
+interface State {
+  username: string;
+}
+
+export class LoginPage extends Component<Properties, State> {
+  public constructor(props: Properties) {
+    super(props);
+    this.state = {
+      username: "",
+    };
+  }
+
+  public render() {
     return (
       <div className="flex-column">
         <Header />
-        <img src={carusselelem3} alt="" className="first" />
+        <img alt="" src={carusselelem3} className="first" />
         <div className="flex-child">
           <form className="form-class">
             <h3>Sign In</h3>
 
             <div className="form-group">
-              <label>Email address</label>
+              <label>Username</label>
               <input
-                type="email"
                 className="form-control"
-                placeholder="Enter email"
+                placeholder="Enter username"
+                onChange={(e) => this.setState({ username: e.target.value })}
+                value={this.state.username}
               />
             </div>
 
@@ -47,11 +65,17 @@ export default class Login extends Component {
               </div>
             </div>
 
-            <button type="submit" className="btn btn-primary btn-block">
-              Submit
-            </button>
+            <Link to="/">
+              <button
+                type="submit"
+                className="btn btn-primary btn-block"
+                onClick={(e) => this.props.update(this.state.username)}
+              >
+                Submit
+              </button>
+            </Link>
             <p className="forgot-password text-right">
-              {/* eslint-disable-next-line */}
+              {/* eslint-disable-next-line  */}
               Forgot <a href="#">password?</a>
             </p>
           </form>
@@ -88,7 +112,15 @@ const Header = () => {
         <span className="header-text">Telling Stories to Learn ...</span>
       </div>
       <div className="button-div">
-        <button className="sign-in-button">Home</button>
+        <Link to="/">
+          <Button
+            className="sign-in-button"
+            variant="contained"
+            color="secondary"
+          >
+            Home
+          </Button>
+        </Link>
       </div>
     </div>
   );

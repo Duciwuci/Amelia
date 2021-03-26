@@ -1,0 +1,30 @@
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    margin-top: 12rem;
+    width: 60%;
+    margin:auto
+  }
+
+  .motherBox{
+      width: 100%;
+  }
+
+.box-style{
+    border: grey solid 2px;
+    border-radius: 10px;
+    padding: 5px;
+    margin-top: 100px;
+    width: 100px;
+}
+
+.box-style-left {
+    float: left;
+
+  }
+  
+.box-style-right {
+    float: right;
+    justify-content: flex-end;
+  }
+

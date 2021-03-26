@@ -7,6 +7,7 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import { LoginPage } from "./components/LoginPage/LoginPage";
 import { StoryMap } from "./components/StoryMap/StoryMap";
 import Dashboard from "./components/DashboardPage/DashboardPage";
+import ProjectPage from "./components/ProjectPage/ProjectPage";
 
 interface State {
   isLoggedIn: boolean;
@@ -36,16 +37,13 @@ class App extends React.Component<{}, State> {
               <Route exact path="/" component={LandingPage} />
               <Route exact path="/story" component={StoryMap} />
               <Route exact path="/dashboard" component={Dashboard} />
-              <Route
-                exact
-                path="/login"
-                render={() => <LoginPage update={this.login} />}
-              />
+              <Route exact path="/project" component={ProjectPage}/>
+              <Route exact path="/login" render={() => <LoginPage update={this.login} />} />
             </div>
           )}
           {this.state.isLoggedIn && (
             <div>
-              <Route exact path="/" component={StoryMap} />
+              <Route exact path="/" render={() => <Dashboard username={this.state.username}/>} />
               <Route exact path="/hello" component={LandingPage} />
             </div>
           )}

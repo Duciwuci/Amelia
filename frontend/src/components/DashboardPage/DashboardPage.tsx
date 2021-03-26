@@ -11,9 +11,12 @@ import { InoIconButton } from '@inovex.de/elements-react';
 import styled from 'styled-components';
 import {Button, Wrapper, Textfield, Title} from '../shared/styles';
 
-export default class Dashboard extends Component {
+interface DashboardProps{
+    username: string;
+}
+export default class Dashboard extends Component<DashboardProps> {
     state = {
-        welcomeMsg: "Welcome Sexy!",
+        welcomeMsg: `Welcome ${this.props.username}!`,
         progressMsg: "Current progress",
         projectMsg: "Projects",
         motivationalMsg: "",

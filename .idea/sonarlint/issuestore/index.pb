@@ -43,3 +43,5 @@ O
 frontend/src/react-app-env.d.ts,8\3\83e9ffd41ec56d497397fdb853a506b18d0d3c7e
 B
 frontend/yarn.lock,0\4\04586714c95c899ad1586d536fdc0d2cc67af8e3
+S
+#.idea/sonarlint/issuestore/index.pb,9\f\9fe84ebb15faf917b7def6236dba604453cc61e0

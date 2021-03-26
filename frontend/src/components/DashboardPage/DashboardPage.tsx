@@ -9,7 +9,7 @@ import studensImg from '../DashboardPage/DashboardPageImages/studensWalk.jpg';
 // @ts-ignore
 import { InoIconButton } from '@inovex.de/elements-react';
 import styled from 'styled-components';
-import { TextField } from "@material-ui/core";
+import {Button, Wrapper, Textfield, Title} from '../shared/styles';
 
 export default class Dashboard extends Component {
     state = {
@@ -115,60 +115,21 @@ export default class Dashboard extends Component {
 
 const dummytext = 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam';
 
-const Button = styled.button`
-  color: palevioletred;
-  font-size: 1em;
-  margin: 0 auto;
-  left: 50%;
-  display: block;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
-  border-radius: 3px;
-  width: 100%;
-
-`;
-
-const Textfield = styled.text`
-    color: palevioletred;
-    padding: 0.25em 1em;
-`;
-
-// Create a Title component that'll render an <h1> tag with some styles
-const Title = styled.h1`
-  font-size: 2vw;
-  text-align: center;
-  color: palevioletred;
-`;
-
-// Create a Wrapper component that'll render a <section> tag with some styles
-const Wrapper = styled.section`
-  padding: 4em;
-  background: papayawhip;
-  @media screen and (max-width:1166px){
-      padding:50px;
-  }
-  @media screen and (max-width:1024px){
-    padding:40px;
-}
-@media screen and (max-width:767px){
-    padding:20px;
-}
-`;
 
 export const Header = () => {
-  return (
-    <div className="Header">
-        <div></div>
-      <div className="header-div">
-        <span className="header-title">Amelia</span>
-        <br />
-        <span className="header-text">Telling Stories to Learn ...</span>
+    return (
+      <div className="Header">
+          <div></div>
+        <div className="header-div">
+          <span className="header-title">Amelia</span>
+          <br />
+          <span className="header-text">Telling Stories to Learn ...</span>
+        </div>
+        <div className="button-div">
+          <button className="sign-in-button">LogIn</button>
+        </div>
       </div>
-      <div className="button-div">
-        <button className="sign-in-button">LogIn</button>
-      </div>
-    </div>
-  );
-
-
-};
+    );
+  
+  
+  };

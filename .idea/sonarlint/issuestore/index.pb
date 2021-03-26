@@ -1,8 +1,6 @@
 
 F
 frontend/src/index.css,9\1\91e522be11677dbeaea3b85493b4868d2728cb6c
-J
-frontend/public/robots.txt,7\1\71da921be3a0f0a448954fe008e28e105a81deb2
 c
 3frontend/src/components/LandingPage/LandingPage.css,0\3\0356c1550a192d9ec98680f06d0066811a888b8d
 E
@@ -33,3 +31,15 @@ g
 7frontend/src/components/DashboardPage/DashboardPage.css,e\a\ea12736b1a7fe8dbd703127eca411832386fb92c
 F
 frontend/tsconfig.json,1\8\18471fb0707c190401cd5328ddb4664160a53d26
+C
+frontend/.gitignore,e\2\e23a63a9f05477a70f6e75d709dbb4eae2db742d
+g
+7frontend/src/components/Dashboard/Carousel/Carousel.tsx,a\d\adf278e18489651bcae078fd4b72af51d1db3366
+_
+/frontend/src/components/Dashboard/Dashboard.css,7\4\743157b08e2f0f6ac8682eddbb541d700b5eea40
+_
+/frontend/src/components/Dashboard/Dashboard.tsx,c\7\c7b0d44fd5d4ee06febe16d3ce680a57e0902528
+O
+frontend/src/react-app-env.d.ts,8\3\83e9ffd41ec56d497397fdb853a506b18d0d3c7e
+B
+frontend/yarn.lock,0\4\04586714c95c899ad1586d536fdc0d2cc67af8e3

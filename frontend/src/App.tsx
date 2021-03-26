@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import LandingPage from "./components/LandingPage/LandingPage";
 import LoginPage from "./components/LoginPage/LoginPage";
-import { Dashboard } from "./components/Dashboard/Dashboard";
+import Dashboard from "./components/DashboardPage/DashboardPage";
 
 function App() {
   return (

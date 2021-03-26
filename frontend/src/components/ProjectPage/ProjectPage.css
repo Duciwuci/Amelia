@@ -6,25 +6,39 @@
     margin:auto
   }
 
-  .motherBox{
+.motherBox{
       width: 100%;
+      margin: auto;
+      margin-top: 100px;
+}
+.img-left {
+    float: left;
+}
+
+.imgRight {
+    float: right;
+}
+
+  img {
+    border-radius: 50%;
+    max-width: 60px;
+    height: auto;
+    padding: 8px;
   }
 
 .box-style{
     border: grey solid 2px;
     border-radius: 10px;
     padding: 5px;
-    margin-top: 100px;
     width: 100px;
 }
 
 .box-style-left {
-    float: left;
+    display:inline;
 
   }
   
 .box-style-right {
-    float: right;
     justify-content: flex-end;
   }
 

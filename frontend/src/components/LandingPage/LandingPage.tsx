@@ -1,6 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { InoCarousel, InoCarouselSlide } from "@inovex.de/elements-react";
+import {
+  InoCarousel,
+  InoCarouselSlide,
+  InoPopover,
+} from "@inovex.de/elements-react";
 import carusselelem1 from "./LandingPageImages/carussel1.jpeg";
 import carusselelem2 from "./LandingPageImages/carussel2.jpeg";
 import carusselelem3 from "./LandingPageImages/carussel3.jpeg";
@@ -8,6 +12,7 @@ import trump from "./LandingPageImages/trump.jpeg";
 import YouTube from "react-youtube";
 import "./LandingPage.css";
 import { Button } from "@material-ui/core";
+import amelia from "../../amelia.png";
 
 class LandingPage extends Component {
   public render() {
@@ -40,6 +45,7 @@ class LandingPage extends Component {
         </div>
 
         <div className="video">
+          <InoPopover inoInteractive={true}>{examplePopover()}</InoPopover>
           <button className="sign-in-button">LogIn</button>
         </div>
         <br />
@@ -95,6 +101,21 @@ const Card = (props: CardProps) => {
       <img alt="" src={props.img} className="img-class" />
       <h3>{props.title}</h3>
       <p>{props.description}</p>
+    </div>
+  );
+};
+
+const examplePopover = (): JSX.Element => {
+  return (
+    <div>
+      <img alt="" src={amelia} />
+      <p>
+        Amelia Earhart was an us-american pilot. Borned in 1897, she was the
+        first women who fly over the atlantic ocean.
+      </p>
+      <Button variant="contained" color="secondary">
+        Click here for more!
+      </Button>
     </div>
   );
 };

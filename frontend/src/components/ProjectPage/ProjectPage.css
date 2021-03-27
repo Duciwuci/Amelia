@@ -13,8 +13,10 @@
 }
 
 .imgTxtBox{
+
     display: flex;
     flex-direction: row;
+    
 }
 
 .img-left {
@@ -26,8 +28,8 @@
 }
 
 .proj-img {
-    border-radius: 50%;
-    max-width: 60px;
+    border-radius: 60%;
+    max-width: 20%;
     height: auto;
     padding: 8px;
 }

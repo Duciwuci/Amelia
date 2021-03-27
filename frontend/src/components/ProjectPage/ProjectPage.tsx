@@ -6,6 +6,7 @@ import laurenz from "./ProjectPageImages/laurenz.jpg";
 import nikola from "./ProjectPageImages/nikola.jpg";
 import aleksandra from "./ProjectPageImages/aleksandra.jpg"
 import "./ProjectPage.css"
+import { Textfield } from "../shared/styles";
 
 export const ProjectPage = () => {
     useWindowSize();
@@ -21,16 +22,16 @@ export const ProjectPage = () => {
             <div className="flex-column">
 
                 <div className="motherBox">
-                    <ImgTxtItem src={filippo} text="Step One" imgLeft={true} reference={box1Ref}  ></ImgTxtItem>
+                    <ImgTxtItem src={filippo} text="Intro Project Amelia" imgLeft={true} reference={box1Ref}  ></ImgTxtItem>
                 </div>
                 <div className="motherBox">
-                    <ImgTxtItem src={laurenz} text="Step One" imgLeft={false} reference={box2Ref}  ></ImgTxtItem>
+                    <ImgTxtItem src={laurenz} text="First steps: Linear functions" imgLeft={false} reference={box2Ref}  ></ImgTxtItem>
                 </div>
                 <div className="motherBox">
-                    <ImgTxtItem src={nikola} text="Step One" imgLeft={true} reference={box3Ref}  ></ImgTxtItem>
+                    <ImgTxtItem src={nikola} text="Flappy Plane" imgLeft={true} reference={box3Ref}  ></ImgTxtItem>
                 </div>
                 <div className="motherBox">
-                    <ImgTxtItem src={aleksandra} text="Step One" imgLeft={false} reference={box4Ref}  ></ImgTxtItem>
+                    <ImgTxtItem src={aleksandra} text="Test your knowledge" imgLeft={false} reference={box4Ref}  ></ImgTxtItem>
                 </div>
 
 
@@ -83,9 +84,9 @@ const ImgTxtItem = (props: ImgTxtProps) => {
 
     return (
         <div className={`imgTxtBox ${props.imgLeft ? "img-left" : "img-right"}`}>
-            {props.imgLeft && <img className="proj-img" src={props.src} ref={props.reference} alt="" style={{width:"100px", height:"auto"}}></img>}
-            <div className="textBox">{props.text}</div>
-            {!props.imgLeft && <img className="proj-img" src={props.src} ref={props.reference} alt="" style={{width:"100px", height:"auto"}}></img>}
+            {props.imgLeft && <img className="proj-img" src={props.src} ref={props.reference} alt="" style={{width:"100%", height:"auto"}}></img>}
+            <Textfield>{props.text}</Textfield>
+            {!props.imgLeft && <img className="proj-img" src={props.src} ref={props.reference} alt="" style={{width:"100%", height:"auto"}}></img>}
         </div>
     );
 

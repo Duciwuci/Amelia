@@ -16,8 +16,15 @@ export const Wrapper = styled.section`
 `;
 
 export const Textfield = styled.text`
+    border: 1px solid;
+    height: 100%;
+    text-align: center;
+    width: 40%;
+    margin: auto;
     color: palevioletred;
     padding: 0.25em 1em;
+    border-radius: 8px;
+    
 `;
 
 // Create a Title component that'll render an <h1> tag with some styles

@@ -10,13 +10,18 @@
       width: 100%;
       margin: auto;
       margin-top: 100px;
-      height: 70px;
 }
+
+.imgTxtBox{
+    display: flex;
+    flex-direction: row;
+}
+
 .img-left {
     float: left;
 }
 
-.imgRight {
+.img-right {
     float: right;
 }
 

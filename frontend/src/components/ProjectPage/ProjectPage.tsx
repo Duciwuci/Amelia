@@ -1,10 +1,11 @@
-import React, { useRef, useState } from "react";
+import React, {useRef, useState } from "react";
 import Xarrow from "react-xarrows";
 import { useWindowSize } from "../shared/useWindowSize";
-import {InoPopover} from "@inovex.de/elements-react";
-import { Step1PopoverElement } from "./Steps";
+import filippo from "./ProjectPageImages/filippo.jpg";
+import laurenz from "./ProjectPageImages/laurenz.jpg";
+import nikola from "./ProjectPageImages/nikola.jpg";
+import aleksandra from "./ProjectPageImages/aleksandra.jpg"
 import "./ProjectPage.css"
-
 
 export const ProjectPage = () => {
     useWindowSize();
@@ -15,37 +16,29 @@ export const ProjectPage = () => {
     const box4Ref = useRef(null);
     return (
         <div>
-            {curtinIsOpen && (<div style={{position: "absolute", width: "100%", height: "100%", backgroundColor: "white", zIndex: 9999}}><button onClick={() => setCurtinIsOpen(false)}>Click Me</button></div>)}
+            {curtinIsOpen && (<div style={{ position: "absolute", width: "100%", height: "100%", backgroundColor: "white", zIndex: 9999 }}><button onClick={() => setCurtinIsOpen(false)}>Click Me</button></div>)}
+
             <div className="flex-column">
 
-            <div className="motherBox">
-                <div className="imgLeft">
-                    <InoPopover inoTrigger="click" inoInteractive={true}>{Step1PopoverElement()}</InoPopover>
-                    <div ref={box1Ref} className="box-style box-style-left">Step1</div>
+                <div className="motherBox">
+                    <ImgTxtItem src={filippo} text="Step One" imgLeft={true} reference={box1Ref}  ></ImgTxtItem>
+                </div>
+                <div className="motherBox">
+                    <ImgTxtItem src={laurenz} text="Step One" imgLeft={false} reference={box2Ref}  ></ImgTxtItem>
+                </div>
+                <div className="motherBox">
+                    <ImgTxtItem src={nikola} text="Step One" imgLeft={true} reference={box3Ref}  ></ImgTxtItem>
+                </div>
+                <div className="motherBox">
+                    <ImgTxtItem src={aleksandra} text="Step One" imgLeft={false} reference={box4Ref}  ></ImgTxtItem>
                 </div>
 
-            </div>
 
 
-            <div className="motherBox">
-                <div className="imgRight">
-                    <div ref={box2Ref} className="box-style box-style-left">Step2</div>
-                </div>
-            </div>
 
-            <div className="motherBox">
-                <div className="imgLeft">
-                    <div ref={box3Ref} className="box-style box-style-left">Step3</div>
-                </div>
-
-            </div>
-
-            <div className="motherBox">
-                <div className="imgRight">
-                    <div ref={box4Ref} className="box-style box-style-left">Step4</div>
-                </div>
-            </div>
             
+
+
             <Xarrow
                 startAnchor="bottom"
                 start={box1Ref} //can be react ref
@@ -74,7 +67,27 @@ export const ProjectPage = () => {
                 color="rgba(75, 109, 70, 0.5)"
 
             />
-        </div>
+            </div>
         </div>
     );
+}
+
+interface ImgTxtProps {
+    src: string;
+    text: string;
+    imgLeft: boolean;
+    reference: any;
+}
+
+const ImgTxtItem = (props: ImgTxtProps) => {
+
+    return (
+        <div className={`imgTxtBox ${props.imgLeft ? "img-left" : "img-right"}`}>
+            {props.imgLeft && <img className="proj-img" src={props.src} ref={props.reference} alt="" style={{width:"100px", height:"auto"}}></img>}
+            <div className="textBox">{props.text}</div>
+            {!props.imgLeft && <img className="proj-img" src={props.src} ref={props.reference} alt="" style={{width:"100px", height:"auto"}}></img>}
+        </div>
+    );
+
+
 }

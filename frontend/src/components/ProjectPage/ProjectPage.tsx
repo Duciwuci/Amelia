@@ -1,29 +1,27 @@
-import React, { Component, useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import Xarrow from "react-xarrows";
 import { useWindowSize } from "../shared/useWindowSize";
-import aleksandra from "./ProjectPageImages/aleksandra.jpg";
-import filippo from "./ProjectPageImages/filippo.jpg";
-import laurenz from "./ProjectPageImages/laurenz.jpg";
-import nikola from "./ProjectPageImages/nikola.jpg";
+import {InoPopover} from "@inovex.de/elements-react";
+import { Step1PopoverElement } from "./Steps";
 import "./ProjectPage.css"
 
 
-export default function ProjectPage() {
+export const ProjectPage = () => {
     useWindowSize();
-    const [isOpen, setIsOpen] = useState(false);
+    const [curtinIsOpen, setCurtinIsOpen] = useState(true);
     const box1Ref = useRef(null); // nutzen, weil die Arrows erst am Ende gerendert werden --> das hier nutzen
     const box2Ref = useRef(null);
     const box3Ref = useRef(null);
     const box4Ref = useRef(null);
     return (
-
-        <div className="flex-column">
-
+        <div>
+            {curtinIsOpen && (<div style={{position: "absolute", width: "100%", height: "100%", backgroundColor: "white", zIndex: 9999}}><button onClick={() => setCurtinIsOpen(false)}>Click Me</button></div>)}
+            <div className="flex-column">
 
             <div className="motherBox">
                 <div className="imgLeft">
-                    <img ref={box1Ref} src={filippo} alt="Avatar" className="image" style={{ "width": "100%" }}></img>
-                    <div  className="box-style box-style-left">Step1</div>
+                    <InoPopover inoTrigger="click" inoInteractive={true}>{Step1PopoverElement()}</InoPopover>
+                    <div ref={box1Ref} className="box-style box-style-left">Step1</div>
                 </div>
 
             </div>
@@ -31,23 +29,20 @@ export default function ProjectPage() {
 
             <div className="motherBox">
                 <div className="imgRight">
-                    <div  className="box-style box-style-left">Step2</div>
-                    <img ref={box2Ref} src={laurenz} alt="Avatar" className="image" style={{ "width": "100%" }}></img>
+                    <div ref={box2Ref} className="box-style box-style-left">Step2</div>
                 </div>
             </div>
 
             <div className="motherBox">
                 <div className="imgLeft">
-                    <img ref={box3Ref} src={aleksandra} alt="Avatar" className="image" style={{ "width": "100%" }}></img>
-                    <div  className="box-style box-style-left">Step3</div>
+                    <div ref={box3Ref} className="box-style box-style-left">Step3</div>
                 </div>
 
             </div>
 
             <div className="motherBox">
                 <div className="imgRight">
-                    <div  className="box-style box-style-left">Step4</div>
-                    <img ref={box4Ref} src={nikola} alt="Avatar" className="image" style={{ "width": "100%" }}></img>
+                    <div ref={box4Ref} className="box-style box-style-left">Step4</div>
                 </div>
             </div>
             
@@ -56,6 +51,9 @@ export default function ProjectPage() {
                 start={box1Ref} //can be react ref
                 end={box2Ref} //or an id
                 endAnchor="top"
+                headSize={0}
+                strokeWidth={8}
+                color="rgba(75, 109, 70, 0.5)"
             />
             <Xarrow
                 startAnchor="bottom"
@@ -63,7 +61,7 @@ export default function ProjectPage() {
                 end={box3Ref}
                 endAnchor="top"
                 headSize={0}
-                strokeWidth={14}
+                strokeWidth={8}
                 color="rgba(75, 109, 70, 0.5)"
             />
             <Xarrow
@@ -71,12 +69,12 @@ export default function ProjectPage() {
                 start={box3Ref}
                 end={box4Ref}
                 endAnchor="top"
-                dashness={{ strokeLen: 1, nonStrokeLen: 8, animation: 10 }}
+                headSize={0}
+                strokeWidth={8}
+                color="rgba(75, 109, 70, 0.5)"
 
             />
         </div>
-
-
-
+        </div>
     );
 }

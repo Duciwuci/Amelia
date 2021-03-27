@@ -40,7 +40,9 @@ class LandingPage extends Component {
         </div>
 
         <div className="video">
-          <button className="sign-in-button">LogIn</button>
+          <Link to="project"><Button  variant="contained"
+            color="secondary"
+            className="sign-in-button">LogIn</Button></Link>
         </div>
         <br />
         <br />

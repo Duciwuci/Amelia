@@ -8,8 +8,7 @@ import chartImg from '../DashboardPage/DashboardPageImages/charts.png';
 import studensImg from '../DashboardPage/DashboardPageImages/studensWalk.jpg';
 // @ts-ignore
 import { InoIconButton } from '@inovex.de/elements-react';
-import styled from 'styled-components';
-import {Button, Wrapper, Textfield, Title} from '../shared/styles';
+import {Button, Wrapper, Title} from '../shared/styles';
 
 interface DashboardProps{
     username: string;
@@ -55,7 +54,7 @@ export default class Dashboard extends Component<DashboardProps> {
                     </InoList>
                 </div>
                 <div className="image-box">
-                    <img src={chartImg}></img>
+                    <img alt="" src={chartImg}></img>
                 </div>
                 <div className="text-boxes">
                     <InoList inoAvatar>
@@ -70,11 +69,11 @@ export default class Dashboard extends Component<DashboardProps> {
                     </InoList>
                 </div>
                 <div className="small-image-box">
-                    <img src={studensImg}></img>
+                    <img alt="" src={studensImg}></img>
                 </div>
                 <div className="text-boxes">
                     <InoList inoAvatar>
-                        <InoListItem inoText= {this.state.projectMsg}>
+                        <InoListItem inoText={this.state.projectMsg}>
                             <InoImg
                                 slot="ino-leading"
                                 src="https://cdn-images-1.medium.com/max/1600/1*HP8l7LMMt7Sh5UoO1T-yLQ.png"

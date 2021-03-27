@@ -10,6 +10,7 @@
       width: 100%;
       margin: auto;
       margin-top: 100px;
+      height: 70px;
 }
 .img-left {
     float: left;
@@ -19,12 +20,12 @@
     float: right;
 }
 
-  img {
+.proj-img {
     border-radius: 50%;
     max-width: 60px;
     height: auto;
     padding: 8px;
-  }
+}
 
 .box-style{
     border: grey solid 2px;

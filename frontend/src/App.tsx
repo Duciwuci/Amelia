@@ -7,7 +7,7 @@ import LandingPage from "./components/LandingPage/LandingPage";
 import { LoginPage } from "./components/LoginPage/LoginPage";
 import { StoryMap } from "./components/StoryMap/StoryMap";
 import Dashboard from "./components/DashboardPage/DashboardPage";
-import ProjectPage from "./components/ProjectPage/ProjectPage";
+import {ProjectPage} from "./components/ProjectPage/ProjectPage";
 
 interface State {
   isLoggedIn: boolean;

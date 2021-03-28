@@ -8,7 +8,7 @@ import chartImg from '../DashboardPage/DashboardPageImages/charts.png';
 import studensImg from '../DashboardPage/DashboardPageImages/studensWalk.jpg';
 // @ts-ignore
 import { InoIconButton } from '@inovex.de/elements-react';
-import {Button, Wrapper, Title} from '../shared/styles';
+import {WideButton, Wrapper, Title} from '../shared/styles';
 
 interface DashboardProps{
     username: string;
@@ -85,7 +85,7 @@ export default class Dashboard extends Component<DashboardProps> {
                 </div>
                 <div className="button-boxes">
                     <div className="button-class">
-                        <Button>{this.state.pathMsg}</Button>
+                        <WideButton>{this.state.pathMsg}</WideButton>
                     </div>
                         <Wrapper>
                         <Title>{dummytext}</Title>
@@ -93,7 +93,7 @@ export default class Dashboard extends Component<DashboardProps> {
                 </div>
                 <div className="button-boxes">
                     <div className="button-class">
-                        <Button>{this.state.pathMsg}</Button>
+                        <WideButton>{this.state.pathMsg}</WideButton>
                     </div>
                         <Wrapper>
                         <Title>{dummytext}</Title>
@@ -101,7 +101,7 @@ export default class Dashboard extends Component<DashboardProps> {
                 </div>
                 <div className="button-boxes">
                     <div className="button-class">
-                        <Button>{this.state.pathMsg}</Button>
+                        <WideButton>{this.state.pathMsg}</WideButton>
                     </div>
                         <Wrapper>
                         <Title>{dummytext}</Title>

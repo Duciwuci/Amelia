@@ -29,7 +29,7 @@
 
 .proj-img {
     border-radius: 60%;
-    max-width: 20%;
+    max-width: 40%;
     height: auto;
     padding: 8px;
 }
@@ -50,3 +50,17 @@
     justify-content: flex-end;
   }
 
+.text-box{
+    padding: 10px;
+
+}
+
+.image-box{
+    padding: 10px;
+    width: 100%;
+}
+
+.button-box{
+    padding: 10px;
+
+}

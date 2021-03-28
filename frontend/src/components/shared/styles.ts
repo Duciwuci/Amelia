@@ -15,26 +15,33 @@ export const Wrapper = styled.section`
 }
 `;
 
-export const Textfield = styled.text`
+export const SmallTextfield = styled.text`
     border: 1px solid;
     height: 100%;
     text-align: center;
-    width: 40%;
+    width: 50%;
     margin: auto;
     color: palevioletred;
     padding: 0.25em 1em;
     border-radius: 8px;
+    font-size: 2.6vw  
+`;
+
+export const WideTextfield = styled.text`
+    color: palevioletred;
+    font-size: 1.6vw;
+    text-align: center;
+    border: 1px solid;
+    height: 100%;
+    width: 100%;    
+    margin: auto;
+    padding: 0.25em 1em;
+    border-radius: 8px;
+    display: block;
     
 `;
 
-// Create a Title component that'll render an <h1> tag with some styles
-export const Title = styled.h1`
-  font-size: 2vw;
-  text-align: center;
-  color: palevioletred;
-`;
-
-export const Button = styled.button`
+export const WideButton = styled.button`
   color: palevioletred;
   font-size: 1em;
   margin: 0 auto;
@@ -44,4 +51,11 @@ export const Button = styled.button`
   border: 2px solid palevioletred;
   border-radius: 3px;
   width: 100%;
+`;
+
+// Create a Title component that'll render an <h1> tag with some styles
+export const Title = styled.h1`
+  font-size: 2vw;
+  text-align: center;
+  color: palevioletred;
 `;

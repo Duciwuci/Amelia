@@ -5,8 +5,9 @@ import filippo from "./ProjectPageImages/filippo.jpg";
 import laurenz from "./ProjectPageImages/laurenz.jpg";
 import nikola from "./ProjectPageImages/nikola.jpg";
 import aleksandra from "./ProjectPageImages/aleksandra.jpg"
+import success from "./ProjectPageImages/success.jpg"
 import "./ProjectPage.css"
-import { Textfield } from "../shared/styles";
+import { SmallTextfield, WideButton, WideTextfield } from "../shared/styles";
 
 export const ProjectPage = () => {
     useWindowSize();
@@ -32,6 +33,15 @@ export const ProjectPage = () => {
                 </div>
                 <div className="motherBox">
                     <ImgTxtItem src={aleksandra} text="Test your knowledge" imgLeft={false} reference={box4Ref}  ></ImgTxtItem>
+                </div>
+                <div className="text-box">
+                    <WideTextfield>Even the best struggle sometimes</WideTextfield>
+                </div>
+                <div className="button-box">
+                    <WideButton>Your progess</WideButton>
+                </div>
+                <div className="image-box">
+                    <img src={success} border-radius=""></img>
                 </div>
 
 
@@ -85,7 +95,7 @@ const ImgTxtItem = (props: ImgTxtProps) => {
     return (
         <div className={`imgTxtBox ${props.imgLeft ? "img-left" : "img-right"}`}>
             {props.imgLeft && <img className="proj-img" src={props.src} ref={props.reference} alt="" style={{width:"100%", height:"auto"}}></img>}
-            <Textfield>{props.text}</Textfield>
+            <SmallTextfield>{props.text}</SmallTextfield>
             {!props.imgLeft && <img className="proj-img" src={props.src} ref={props.reference} alt="" style={{width:"100%", height:"auto"}}></img>}
         </div>
     );

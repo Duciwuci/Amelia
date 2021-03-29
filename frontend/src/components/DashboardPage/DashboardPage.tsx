@@ -4,16 +4,20 @@ import { InoImg, InoList, InoListItem } from "@inovex.de/elements-react";
 import "./DashboardPage.css";
 // @ts-ignore
 // @ts-ignore
-import studensImg from "../DashboardPage/DashboardPageImages/studensWalk.jpg";
+import citat from "../DashboardPage/DashboardPageImages/zitat.png";
 // @ts-ignore
 import { InoIconButton } from "@inovex.de/elements-react";
 import { Link } from "react-router-dom";
 import {
+  Text,
   WideButton,
   Wrapper,
   Title,
   ScrollPage,
   BACKGROUND,
+  MainHeaderBackground,
+  NormalHugeHeader,
+  FullButton,
 } from "../shared/styles";
 
 import { Button } from "@material-ui/core";
@@ -43,56 +47,35 @@ export default class Dashboard extends Component<DashboardProps> {
       <div style={{ backgroundColor: BACKGROUND }}>
         <Header />
         <ScrollPage>
-          <div className="text-boxes">
-            <InoList inoAvatar>
-              <InoListItem inoText={this.state.welcomeMsg}>
-                <InoImg
-                  slot="ino-leading"
-                  src="https://cdn-images-1.medium.com/max/1600/1*HP8l7LMMt7Sh5UoO1T-yLQ.png"
-                  ino-ratio-width="1"
-                  ino-ratio-height="1"
-                />
-              </InoListItem>
-              <InoListItem inoText={this.state.progressMsg}>
-                <InoImg
-                  slot="ino-leading"
-                  src="https://cdn-images-1.medium.com/max/1600/1*HP8l7LMMt7Sh5UoO1T-yLQ.png"
-                  ino-ratio-width="1"
-                  ino-ratio-height="1"
-                />
-              </InoListItem>
-            </InoList>
+          <div className="headline-block">
+              <NormalHugeHeader>Welcome {this.props.username}!</NormalHugeHeader>
+              <NormalHugeHeader>My Progress</NormalHugeHeader>
           </div>
-          <div className="image-box">
+          <div className="chart-block">
             <ApexChart />
           </div>
-          <div className="text-boxes">
-            <InoList inoAvatar>
-              <InoListItem inoText="No one can stop you from being yourself">
-                <InoImg
-                  slot="ino-leading"
-                  src="https://cdn-images-1.medium.com/max/1600/1*HP8l7LMMt7Sh5UoO1T-yLQ.png"
-                  ino-ratio-width="1"
-                  ino-ratio-height="1"
-                />
-              </InoListItem>
-            </InoList>
+          <div className="info-block">
+            <img src={citat} alt="" style={{ marginBottom: "2rem", height: "100px" }} />
           </div>
-          <div className="small-image-box">
-            <img alt="" src={studensImg}></img>
+          <div className="citate-div">
+            <p className="citate">
+            Amazing that you started this educational journey, you’re doing great! “Education is the most powerful weapon which you can use to change the world”
+            </p>
+            <p className="citate">Nelson Mandela</p>
           </div>
-          <div className="text-boxes">
-            <InoList inoAvatar>
-              <InoListItem inoText={this.state.projectMsg}>
-                <InoImg
-                  slot="ino-leading"
-                  src="https://cdn-images-1.medium.com/max/1600/1*HP8l7LMMt7Sh5UoO1T-yLQ.png"
-                  ino-ratio-width="1"
-                  ino-ratio-height="1"
-                />
-              </InoListItem>
-            </InoList>
+
+          <div className="info-block">
+            <FullButton primary={false}>Projects</FullButton>
           </div>
+
+          <div className="info-block">
+            <Text>Build your knowledge with projects and experiment with different topics and media! You choose your pace and what interests you!</Text>
+          </div>
+          <div className="info-block">
+            <FullButton primary>Tutor + Buddy Portal</FullButton>
+          </div>
+          
+         
           <div className="button-boxes">
             <div className="button-class">
               <WideButton>{this.state.pathMsg}</WideButton>

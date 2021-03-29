@@ -28,7 +28,6 @@
   margin: 0 auto;
 }
 .image-box img {
-  height: 100%;
   width: 100%;
   display: block;
 }
@@ -81,4 +80,18 @@
 .sign-in-button {
   width: 8rem;
   height: 4rem;
+}
+
+.headline-block {
+  width: 350px;
+  margin-left: 3rem;
+  margin-top: 2rem;
+  text-align: left;
+  align-items: center;
+}
+
+.chart-block{
+  width: 300px;
+  margin: auto;
+  margin-top: 2rem;
 }

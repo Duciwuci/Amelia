@@ -108,3 +108,14 @@ export const NormalHeader = styled.h3`
 export const NormalHugeHeader = styled.h1`
   font-family: ‘Shadows Into Light Two’, cursive;
 `;
+
+export const FullButton = styled.button<{primary:boolean}>`
+  background: background: ${props => props.primary ? 
+    BUTTON_RED : "white"};
+  color: ${props => props.primary ? BUTTON_BLUE : "black"};
+  font-family: ‘Shadows Into Light Two’, cursive;
+  border: none;
+  width: 350px;
+  height: 50px;
+  border-radius: 5px;
+`

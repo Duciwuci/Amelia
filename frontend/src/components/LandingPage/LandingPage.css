@@ -46,6 +46,7 @@
 .carousel {
   margin: auto;
   margin-top: 2rem;
+  width: 350px;
 }
 
 .main-header {
@@ -74,4 +75,12 @@
   font-style: italic;
   font-size: large;
   color: blue;
+}
+
+.info-block{
+  width: 350px;
+  margin:auto;
+  margin-top:2rem;
+  text-align:center;
+  align-items: center;
 }

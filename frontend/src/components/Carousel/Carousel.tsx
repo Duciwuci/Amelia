@@ -3,8 +3,6 @@ import {
   CarouselProvider,
   Slider,
   Slide,
-  ButtonBack,
-  ButtonNext,
   Image,
 } from "pure-react-carousel";
 import "pure-react-carousel/dist/react-carousel.es.css";
@@ -27,8 +25,6 @@ export const ACarousel = (props: ACarouselProps) => {
                 <Slide index={1}><Image src={props.src2} hasMasterSpinner={true} /></Slide>
                 <Slide index={2}><Image src={props.src3} hasMasterSpinner={true} /></Slide>
             </Slider>
-            <ButtonBack>Back</ButtonBack>
-            <ButtonNext>Next</ButtonNext>
             </CarouselProvider>
   );
 };

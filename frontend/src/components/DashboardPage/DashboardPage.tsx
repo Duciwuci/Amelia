@@ -15,7 +15,9 @@ import {
   ScrollPage,
   BACKGROUND,
 } from "../shared/styles";
+
 import { Button } from "@material-ui/core";
+import {ACarousel} from "../Carousel/Carousel";
 
 interface DashboardProps {
   username: string;

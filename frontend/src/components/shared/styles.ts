@@ -76,5 +76,5 @@ export const Header = styled.div`
 export const ScrollPage = styled.div`
   display: flex;
   flex-direction: column;
-  margin-top: 12rem;
+  margin-top: 7rem;
 `;

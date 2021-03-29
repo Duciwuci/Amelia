@@ -7,7 +7,7 @@ import GoogleButton from "react-google-button";
 import "../SignUpPage/SignUpPage.css";
 import "../LandingPage/LandingPage.css";
 import { Button } from "@material-ui/core";
-import { ScrollPage } from "../shared/styles";
+import { ScrollPage, BACKGROUND } from "../shared/styles";
 
 interface Properties {
   update(name: string): void;
@@ -27,7 +27,7 @@ export class LoginPage extends Component<Properties, State> {
 
   public render() {
     return (
-      <>
+      <div style={{backgroundColor: BACKGROUND}}>
         <Header />
         <ScrollPage>
           <img alt="" src={carusselelem3} className="first" />
@@ -104,7 +104,7 @@ export class LoginPage extends Component<Properties, State> {
             <button className="sign-in-button">Sign Up</button>
           </div>
         </ScrollPage>
-      </>
+      </div>
     );
   }
 }
@@ -122,7 +122,7 @@ const Header = () => {
           <Button
             className="sign-in-button"
             variant="contained"
-            color="primary"
+            color="secondary"
           >
             Home
           </Button>

@@ -8,12 +8,12 @@ import trump from "./LandingPageImages/trump.jpeg";
 import YouTube from "react-youtube";
 import "./LandingPage.css";
 import { Button } from "@material-ui/core";
-import { ScrollPage } from "../shared/styles";
+import { ScrollPage, BACKGROUND } from "../shared/styles";
 
 class LandingPage extends Component {
   public render() {
     return (
-      <React.Fragment>
+      <div style={{backgroundColor: BACKGROUND}}>
         <Header />
         <ScrollPage>
           <div className="carousel">
@@ -55,7 +55,7 @@ class LandingPage extends Component {
           <br />
           <br />
         </ScrollPage>
-      </React.Fragment>
+      </div>
     );
   }
 }
@@ -64,9 +64,7 @@ export const Header = () => {
   return (
     <div className="Header">
       <div className="header-div">
-        <span className="header-title">Amelia</span>
-        <br />
-        <span className="header-text">Telling Stories to Learn ...</span>
+          <img alt="" src="../../../public/logo.svg" />
       </div>
       <div className="button-div">
         <Link to="/login">

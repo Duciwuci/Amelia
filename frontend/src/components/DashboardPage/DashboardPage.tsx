@@ -3,11 +3,11 @@ import React, { Component } from "react";
 import { InoImg, InoList, InoListItem } from "@inovex.de/elements-react";
 import "./DashboardPage.css";
 // @ts-ignore
-import chartImg from "../DashboardPage/DashboardPageImages/charts.png";
 // @ts-ignore
 import studensImg from "../DashboardPage/DashboardPageImages/studensWalk.jpg";
 // @ts-ignore
 import { InoIconButton } from "@inovex.de/elements-react";
+import { Link } from "react-router-dom";
 import {
   WideButton,
   Wrapper,
@@ -17,7 +17,7 @@ import {
 } from "../shared/styles";
 
 import { Button } from "@material-ui/core";
-import {ACarousel} from "../Carousel/Carousel";
+import { ApexChart } from "./DashboardGraphs/ProgressChart";
 
 interface DashboardProps {
   username: string;
@@ -64,7 +64,7 @@ export default class Dashboard extends Component<DashboardProps> {
             </InoList>
           </div>
           <div className="image-box">
-            <img alt="" src={chartImg}></img>
+            <ApexChart />
           </div>
           <div className="text-boxes">
             <InoList inoAvatar>
@@ -137,13 +137,15 @@ export const Header = () => {
         <img alt="" src="../../../public/logo.svg" />
       </div>
       <div className="button-div">
-        <Button
-          className="sign-in-button"
-          variant="contained"
-          color="secondary"
-        >
-          Log Out
-        </Button>
+        <Link to="/">
+          <Button
+            className="sign-in-button"
+            variant="contained"
+            color="secondary"
+          >
+            Log Out
+          </Button>
+        </Link>
       </div>
     </div>
   );

@@ -20,7 +20,7 @@ class App extends React.Component<{}, State> {
     super({});
     this.state = {
       isLoggedIn: false,
-      username: "",
+      username: "Shakira",
     };
     this.login = this.login.bind(this);
   }
@@ -37,7 +37,11 @@ class App extends React.Component<{}, State> {
             <div>
               <Route exact path="/" component={LandingPage} />
               <Route exact path="/story" component={StoryMap} />
-              <Route exact path="/dashboard" component={Dashboard} />
+              <Route
+                exact
+                path="/dashboard"
+                render={() => <Dashboard username={this.state.username} />}
+              />
               <Route exact path="/project" component={ProjectPage} />
               <Route exact path="/carousel" component={ACarousel} />
               <Route

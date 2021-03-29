@@ -4,41 +4,40 @@ import styled from "styled-components";
 export const Wrapper = styled.section`
   padding: 4em;
   background: papayawhip;
-  @media screen and (max-width:1166px){
-      padding:50px;
+  @media screen and (max-width: 1166px) {
+    padding: 50px;
   }
-  @media screen and (max-width:1024px){
-    padding:40px;
-}
-@media screen and (max-width:767px){
-    padding:20px;
-}
+  @media screen and (max-width: 1024px) {
+    padding: 40px;
+  }
+  @media screen and (max-width: 767px) {
+    padding: 20px;
+  }
 `;
 
 export const SmallTextfield = styled.text`
-    border: 1px solid;
-    height: 100%;
-    text-align: center;
-    width: 50%;
-    margin: auto;
-    color: palevioletred;
-    padding: 0.25em 1em;
-    border-radius: 8px;
-    font-size: 2.6vw  
+  border: 1px solid;
+  height: 100%;
+  text-align: center;
+  width: 50%;
+  margin: auto;
+  color: palevioletred;
+  padding: 0.25em 1em;
+  border-radius: 8px;
+  font-size: 2.6vw;
 `;
 
 export const WideTextfield = styled.text`
-    color: palevioletred;
-    font-size: 1.6vw;
-    text-align: center;
-    border: 1px solid;
-    height: 100%;
-    width: 100%;    
-    margin: auto;
-    padding: 0.25em 1em;
-    border-radius: 8px;
-    display: block;
-    
+  color: palevioletred;
+  font-size: 1.6vw;
+  text-align: center;
+  border: 1px solid;
+  height: 100%;
+  width: 100%;
+  margin: auto;
+  padding: 0.25em 1em;
+  border-radius: 8px;
+  display: block;
 `;
 
 export const WideButton = styled.button`
@@ -87,9 +86,9 @@ export const MainHeaderBackground = styled.div`
     rgba(255, 63, 70, 1) 50%,
     rgba(255, 72, 94, 1) 100%
   );
-  width:350px;
+  width: 350px;
   text-align: center;
-  `;
+`;
 
 export const MainHeader = styled.h3`
   font-family: ‘Shadows Into Light Two’, cursive;
@@ -99,8 +98,13 @@ export const MainHeader = styled.h3`
 export const Text = styled.p`
   font-family: ‘Source Sans Pro’, sans-serif;
   text-align: justify;
-`
+  color: #707070;
+`;
 
 export const NormalHeader = styled.h3`
   font-family: ‘Shadows Into Light Two’, cursive;
-`
+`;
+
+export const NormalHugeHeader = styled.h1`
+  font-family: ‘Shadows Into Light Two’, cursive;
+`;

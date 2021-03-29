@@ -69,18 +69,19 @@
 .citate-div {
   margin: auto;
   margin-top: 2rem;
+  width: 350px;
 }
 
 .citate {
   font-style: italic;
   font-size: large;
-  color: blue;
+  color: #707070;
 }
 
-.info-block{
+.info-block {
   width: 350px;
-  margin:auto;
-  margin-top:2rem;
-  text-align:center;
+  margin: auto;
+  margin-top: 2rem;
+  text-align: center;
   align-items: center;
 }

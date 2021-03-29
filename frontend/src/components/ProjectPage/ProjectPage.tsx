@@ -17,11 +17,13 @@ export const ProjectPage = () => {
     const box3Ref = useRef(null);
     const box4Ref = useRef(null);
     return (
+
         <div>
+            <Header/>
             {curtinIsOpen && (<div style={{ position: "absolute", width: "100%", height: "100%", backgroundColor: "white", zIndex: 9999 }}><button onClick={() => setCurtinIsOpen(false)}>Click Me</button></div>)}
-
+            
             <div className="flex-column">
-
+                
                 <div className="motherBox">
                     <ImgTxtItem src={filippo} text="Intro Project Amelia" imgLeft={true} reference={box1Ref}  ></ImgTxtItem>
                 </div>
@@ -41,7 +43,7 @@ export const ProjectPage = () => {
                     <WideButton>Your progess</WideButton>
                 </div>
                 <div className="image-box">
-                    <img src={success} border-radius=""></img>
+                    <img src={success} border-radius="" alt=""></img>
                 </div>
 
 
@@ -102,3 +104,21 @@ const ImgTxtItem = (props: ImgTxtProps) => {
 
 
 }
+
+export const Header = () => {
+    return (
+      <div className="Header">
+          <div></div>
+        <div className="header-div">
+          <span className="header-title">Amelia</span>
+          <br />
+          <span className="header-text">Telling Stories to Learn ...</span>
+        </div>
+        <div className="button-div">
+          <button className="sign-in-button">LogIn</button>
+        </div>
+      </div>
+    );
+  
+  
+  };

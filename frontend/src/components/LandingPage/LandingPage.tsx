@@ -12,8 +12,10 @@ import { Button } from "@material-ui/core";
 class LandingPage extends Component {
   public render() {
     return (
+      <React.Fragment>
+      <Header />
       <div className="flex-column">
-        <Header />
+       
         <div className="carousel">
           <InoCarousel inoAutoplay={true}>
             <InoCarouselSlide value={"1"} src={carusselelem1} />
@@ -47,6 +49,7 @@ class LandingPage extends Component {
         <br />
         <br />
       </div>
+      </React.Fragment>
     );
   }
 }

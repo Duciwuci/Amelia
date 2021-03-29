@@ -42,7 +42,7 @@ export const WideTextfield = styled.text`
 `;
 
 export const WideButton = styled.button`
-  color: palevioletred;
+  color: rgba(ff3f46);
   font-size: 1em;
   margin: 0 auto;
   left: 50%;

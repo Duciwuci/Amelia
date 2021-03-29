@@ -8,7 +8,13 @@ import chartImg from "../DashboardPage/DashboardPageImages/charts.png";
 import studensImg from "../DashboardPage/DashboardPageImages/studensWalk.jpg";
 // @ts-ignore
 import { InoIconButton } from "@inovex.de/elements-react";
-import { WideButton, Wrapper, Title, ScrollPage, BACKGROUND } from "../shared/styles";
+import {
+  WideButton,
+  Wrapper,
+  Title,
+  ScrollPage,
+  BACKGROUND,
+} from "../shared/styles";
 import { Button } from "@material-ui/core";
 
 interface DashboardProps {
@@ -32,7 +38,7 @@ export default class Dashboard extends Component<DashboardProps> {
 
   public render() {
     return (
-      <div style={{backgroundColor: BACKGROUND}}>
+      <div style={{ backgroundColor: BACKGROUND }}>
         <Header />
         <ScrollPage>
           <div className="text-boxes">
@@ -126,12 +132,16 @@ export const Header = () => {
     <div className="Header">
       <div></div>
       <div className="header-div">
-          <img alt="" src="../../../public/logo.svg" />
+        <img alt="" src="../../../public/logo.svg" />
       </div>
       <div className="button-div">
-        <Button className="sign-in-button" 
-            variant="contained"
-            color="secondary">Log Out</Button>
+        <Button
+          className="sign-in-button"
+          variant="contained"
+          color="secondary"
+        >
+          Log Out
+        </Button>
       </div>
     </div>
   );

@@ -13,7 +13,7 @@ import { ScrollPage, BACKGROUND } from "../shared/styles";
 class LandingPage extends Component {
   public render() {
     return (
-      <div style={{backgroundColor: BACKGROUND}}>
+      <div style={{ backgroundColor: BACKGROUND }}>
         <Header />
         <ScrollPage>
           <div className="carousel">
@@ -64,7 +64,7 @@ export const Header = () => {
   return (
     <div className="Header">
       <div className="header-div">
-          <img alt="" src="../../../public/logo.svg" />
+        <img alt="" src="../../../public/logo.svg" />
       </div>
       <div className="button-div">
         <Link to="/login">

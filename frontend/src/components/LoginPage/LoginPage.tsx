@@ -27,7 +27,7 @@ export class LoginPage extends Component<Properties, State> {
 
   public render() {
     return (
-      <div style={{backgroundColor: BACKGROUND}}>
+      <div style={{ backgroundColor: BACKGROUND }}>
         <Header />
         <ScrollPage>
           <img alt="" src={carusselelem3} className="first" />

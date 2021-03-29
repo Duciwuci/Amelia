@@ -1,66 +1,61 @@
 .flex-column {
-    display: flex;
-    flex-direction: column;
-    margin-top: 12rem;
-    width: 60%;
-    margin:auto
-  }
-
-.motherBox{
-      width: 100%;
-      margin: auto;
-      margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  margin-top: 12rem;
+  width: 60%;
+  margin: auto;
 }
 
-.imgTxtBox{
+.motherBox {
+  width: 100%;
+  margin: auto;
+  margin-top: 100px;
+}
 
-    display: flex;
-    flex-direction: row;
-    
+.imgTxtBox {
+  display: flex;
+  flex-direction: row;
 }
 
 .img-left {
-    float: left;
+  float: left;
 }
 
 .img-right {
-    float: right;
+  float: right;
 }
 
 .proj-img {
-    border-radius: 60%;
-    max-width: 40%;
-    height: auto;
-    padding: 8px;
+  border-radius: 60%;
+  max-width: 40%;
+  height: auto;
+  padding: 8px;
 }
 
-.box-style{
-    border: grey solid 2px;
-    border-radius: 10px;
-    padding: 5px;
-    width: 100px;
+.box-style {
+  border: grey solid 2px;
+  border-radius: 10px;
+  padding: 5px;
+  width: 100px;
 }
 
 .box-style-left {
-    display:inline;
+  display: inline;
+}
 
-  }
-  
 .box-style-right {
-    justify-content: flex-end;
-  }
-
-.text-box{
-    padding: 10px;
-
+  justify-content: flex-end;
 }
 
-.image-box{
-    padding: 10px;
-    width: 100%;
+.text-box {
+  padding: 10px;
 }
 
-.button-box{
-    padding: 10px;
+.image-box {
+  padding: 10px;
+  width: 100%;
+}
 
+.button-box {
+  padding: 10px;
 }

@@ -8,47 +8,53 @@ import trump from "./LandingPageImages/trump.jpeg";
 import YouTube from "react-youtube";
 import "./LandingPage.css";
 import { Button } from "@material-ui/core";
+import { ScrollPage } from "../shared/styles";
 
 class LandingPage extends Component {
   public render() {
     return (
       <React.Fragment>
-      <Header />
-      <div className="flex-column">
-       
-        <div className="carousel">
-          <InoCarousel inoAutoplay={true}>
-            <InoCarouselSlide value={"1"} src={carusselelem1} />
-            <InoCarouselSlide value={"2"} src={carusselelem2} />
-            <InoCarouselSlide value={"3"} src={carusselelem3} />
-          </InoCarousel>
-        </div>
-        <MainHeader />
+        <Header />
+        <ScrollPage>
+          <div className="carousel">
+            <InoCarousel inoAutoplay={true}>
+              <InoCarouselSlide value={"1"} src={carusselelem1} />
+              <InoCarouselSlide value={"2"} src={carusselelem2} />
+              <InoCarouselSlide value={"3"} src={carusselelem3} />
+            </InoCarousel>
+          </div>
+          <MainHeader />
 
-        <Card
-          title="We did it!"
-          description="It's an awesome App! Use it, download it, but more, enjoy it! - Donald Trump"
-          img={trump}
-        />
-        <div className="video">
-          <YouTube videoId="jRKF83_INB8" />
-        </div>
+          <Card
+            title="We did it!"
+            description="It's an awesome App! Use it, download it, but more, enjoy it! - Donald Trump"
+            img={trump}
+          />
+          <div className="video">
+            <YouTube videoId="jRKF83_INB8" />
+          </div>
 
-        <div className="citate-div">
-          <p className="citate">
-            {" "}
-            "Ich werde für immer glücklich und klug sein." - Duc Viet Mai{" "}
-          </p>
-        </div>
+          <div className="citate-div">
+            <p className="citate">
+              {" "}
+              "Ich werde für immer glücklich und klug sein." - Duc Viet Mai{" "}
+            </p>
+          </div>
 
-        <div className="video">
-          <Link to="project"><Button  variant="contained"
-            color="secondary"
-            className="sign-in-button">LogIn</Button></Link>
-        </div>
-        <br />
-        <br />
-      </div>
+          <div className="video">
+            <Link to="project">
+              <Button
+                variant="contained"
+                color="secondary"
+                className="sign-in-button"
+              >
+                LogIn
+              </Button>
+            </Link>
+          </div>
+          <br />
+          <br />
+        </ScrollPage>
       </React.Fragment>
     );
   }

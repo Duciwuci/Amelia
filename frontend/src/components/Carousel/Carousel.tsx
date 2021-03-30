@@ -14,6 +14,7 @@ export const ACarousel = (props: ACarouselProps) => {
       naturalSlideWidth={150}
       naturalSlideHeight={100}
       totalSlides={3}
+      infinite={true}
     >
       <Slider>
         <Slide index={0}>
@@ -27,5 +28,31 @@ export const ACarousel = (props: ACarouselProps) => {
         </Slide>
       </Slider>
     </CarouselProvider>
+  );
+};
+
+export const SmallCarousel = (props: ACarouselProps) => {
+  return (
+    <div style={{height: "250px"}}>
+      <CarouselProvider
+      naturalSlideWidth={0}
+      naturalSlideHeight={0}
+      totalSlides={3}
+      infinite={true}
+      isIntrinsicHeight={true}
+    >
+      <Slider>
+        <Slide index={0}>
+          <Image style={{height: "250px"}} src={props.src1} hasMasterSpinner={true} />
+        </Slide>
+        <Slide index={1}>
+          <Image style={{height: "250px"}} src={props.src2} hasMasterSpinner={true} />
+        </Slide>
+        <Slide index={2}>
+          <Image style={{height: "250px"}} src={props.src3} hasMasterSpinner={true} />
+        </Slide>
+      </Slider>
+    </CarouselProvider>
+    </div>
   );
 };

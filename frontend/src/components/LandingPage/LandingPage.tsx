@@ -21,7 +21,7 @@ class LandingPage extends Component {
   public render() {
     return (
       <div style={{ width: "100%", backgroundColor: BACKGROUND }}>
-        <Header to="/dashboard" buttonName="LOG IN"/>
+        <Header to="/dashboard" buttonName="LOG IN" />
         <ScrollPage>
           <div className="carousel">
             <ACarousel

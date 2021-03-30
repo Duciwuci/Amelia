@@ -9,6 +9,7 @@ import { StoryMap } from "./components/StoryMap/StoryMap";
 import Dashboard from "./components/DashboardPage/DashboardPage";
 import { ProjectPage } from "./components/ProjectPage/ProjectPage";
 import { ACarousel } from "./components/Carousel/Carousel";
+import ProjectOverview from "./components/ProjectOverview/ProjectOverview";
 
 interface State {
   isLoggedIn: boolean;
@@ -44,6 +45,7 @@ class App extends React.Component<{}, State> {
               />
               <Route exact path="/project" component={ProjectPage} />
               <Route exact path="/carousel" component={ACarousel} />
+              <Route exact path="/projectoverview" component={ProjectOverview} />
               <Route
                 exact
                 path="/login"

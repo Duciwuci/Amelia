@@ -109,14 +109,12 @@ export const NormalHugeHeader = styled.h1`
   font-family: ‘Shadows Into Light Two’, cursive;
 `;
 
-export const FullButton = styled.button<{primary:boolean}>`
-  background: ${props => props.primary ? 
-    BUTTON_RED : BUTTON_BLUE};
-  color: ${props => props.primary ? "white" : "black"};
+export const FullButton = styled.button<{ primary: boolean }>`
+  background: ${(props) => (props.primary ? BUTTON_RED : BUTTON_BLUE)};
+  color: ${(props) => (props.primary ? "white" : "black")};
   font-family: ‘Shadows Into Light Two’, cursive;
   border: none;
   width: 350px;
   height: 50px;
   border-radius: 5px;
-`
-
+`;

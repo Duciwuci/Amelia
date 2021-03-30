@@ -19,7 +19,7 @@ export const ProjectPage = () => {
   const box4Ref = useRef(null);
   return (
     <div>
-      <Header to="/" buttonName="LOG OUT"/>
+      <Header to="/" buttonName="LOG OUT" />
       {curtinIsOpen && (
         <div
           style={{

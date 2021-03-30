@@ -39,49 +39,68 @@ export default class Dashboard extends Component<DashboardProps> {
         <Header />
         <ScrollPage>
           <div className="headline-block">
-              <NormalHugeHeader>Welcome {this.props.username}!</NormalHugeHeader>
-              <NormalHugeHeader>My Progress</NormalHugeHeader>
+            <NormalHugeHeader>Welcome {this.props.username}!</NormalHugeHeader>
+            <NormalHugeHeader>My Progress</NormalHugeHeader>
           </div>
           <div className="chart-block">
             <ApexChart />
           </div>
           <div className="info-block">
-            <img src={citat} alt="" style={{ marginBottom: "2rem", height: "100px" }} />
+            <img
+              src={citat}
+              alt=""
+              style={{ marginBottom: "2rem", height: "100px" }}
+            />
           </div>
           <div className="citate-div">
             <p className="citate">
-            Amazing that you started this educational journey, you’re doing great! “Education is the most powerful weapon which you can use to change the world”
+              Amazing that you started this educational journey, you’re doing
+              great! “Education is the most powerful weapon which you can use to
+              change the world”
             </p>
             <p className="citate">Nelson Mandela</p>
           </div>
 
           <div className="info-block">
-            <FullButton primary={true}>Projects</FullButton>
+            <Link to="/projectoverview">
+              <FullButton primary={true}>Projects</FullButton>
+            </Link>
           </div>
 
           <div className="info-block">
-            <Text>Build your knowledge with projects and experiment with different topics and media! You choose your pace and what interests you!</Text>
+            <Text>
+              Build your knowledge with projects and experiment with different
+              topics and media! You choose your pace and what interests you!
+            </Text>
           </div>
           <div className="info-block">
             <FullButton primary={false}>Tutor + Buddy Portal</FullButton>
           </div>
           <div className="info-block">
-            <Text>Need a helping hand? No problem! Find a tutor for a quick question via chat or even find yourself a mentoring buddy to give you further advice. Choose your buddy based on interests you have in common and get a tutor based on the subject you have questions for.</Text>
+            <Text>
+              Need a helping hand? No problem! Find a tutor for a quick question
+              via chat or even find yourself a mentoring buddy to give you
+              further advice. Choose your buddy based on interests you have in
+              common and get a tutor based on the subject you have questions
+              for.
+            </Text>
           </div>
           <div className="info-block">
             <FullButton primary={false}>Path Finder</FullButton>
           </div>
-          <div style={{marginBottom:"3rem"}} className="info-block">
-            <Text>          No idea what career path you would like to pursue after school? No problem, we got you covered! Check out the paths we suggest to you based on your strengths and interests.</Text>
+          <div style={{ marginBottom: "3rem" }} className="info-block">
+            <Text>
+              {" "}
+              No idea what career path you would like to pursue after school? No
+              problem, we got you covered! Check out the paths we suggest to you
+              based on your strengths and interests.
+            </Text>
           </div>
         </ScrollPage>
       </div>
     );
   }
 }
-
-const dummytext =
-  "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam";
 
 export const Header = () => {
   return (

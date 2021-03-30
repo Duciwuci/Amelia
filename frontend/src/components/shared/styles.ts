@@ -93,6 +93,7 @@ export const MainHeaderBackground = styled.div`
 export const MainHeader = styled.h3`
   font-family: ‘Shadows Into Light Two’, cursive;
   color: white;
+  font-size: 1.2rem;
 `;
 
 export const Text = styled.p`

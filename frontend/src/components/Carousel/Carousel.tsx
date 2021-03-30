@@ -6,14 +6,18 @@ interface ACarouselProps {
   src1: string;
   src2: string;
   src3: string;
+  src4: string;
+  src5: string;
+  src6: string;
+  src7: string;
 }
 
 export const ACarousel = (props: ACarouselProps) => {
   return (
     <CarouselProvider
-      naturalSlideWidth={150}
+      naturalSlideWidth={100}
       naturalSlideHeight={100}
-      totalSlides={3}
+      totalSlides={7}
       infinite={true}
     >
       <Slider>
@@ -25,6 +29,18 @@ export const ACarousel = (props: ACarouselProps) => {
         </Slide>
         <Slide index={2}>
           <Image src={props.src3} hasMasterSpinner={true} />
+        </Slide>
+        <Slide index={2}>
+          <Image src={props.src4} hasMasterSpinner={true} />
+        </Slide>
+        <Slide index={2}>
+          <Image src={props.src5} hasMasterSpinner={true} />
+        </Slide>
+        <Slide index={2}>
+          <Image src={props.src6} hasMasterSpinner={true} />
+        </Slide>
+        <Slide index={2}>
+          <Image src={props.src7} hasMasterSpinner={true} />
         </Slide>
       </Slider>
     </CarouselProvider>

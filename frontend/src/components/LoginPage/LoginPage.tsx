@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-
-import carusselelem3 from "../LandingPage/LandingPageImages/carussel3.jpeg";
+import l4 from "../LandingPage/LandingPageImages/carousel/l4.png";
 import { GoogleLogin } from "react-google-login";
 import GoogleButton from "react-google-button";
 import "../SignUpPage/SignUpPage.css";
@@ -30,7 +29,7 @@ export class LoginPage extends Component<Properties, State> {
       <div style={{ backgroundColor: BACKGROUND }}>
         <Header />
         <ScrollPage>
-          <img alt="" src={carusselelem3} className="first" />
+          <img alt="" src={l4} alt="" className="first" />
           <div className="flex-child">
             <form className="form-class">
               <h3>Sign In</h3>

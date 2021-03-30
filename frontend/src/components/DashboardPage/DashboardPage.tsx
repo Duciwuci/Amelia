@@ -1,21 +1,12 @@
 import React, { Component } from "react";
-// @ts-ignore
-import { InoImg, InoList, InoListItem } from "@inovex.de/elements-react";
 import "./DashboardPage.css";
 // @ts-ignore
-// @ts-ignore
 import citat from "../DashboardPage/DashboardPageImages/zitat.png";
-// @ts-ignore
-import { InoIconButton } from "@inovex.de/elements-react";
 import { Link } from "react-router-dom";
 import {
   Text,
-  WideButton,
-  Wrapper,
-  Title,
   ScrollPage,
   BACKGROUND,
-  MainHeaderBackground,
   NormalHugeHeader,
   FullButton,
 } from "../shared/styles";
@@ -65,43 +56,23 @@ export default class Dashboard extends Component<DashboardProps> {
           </div>
 
           <div className="info-block">
-            <FullButton primary={false}>Projects</FullButton>
+            <FullButton primary={true}>Projects</FullButton>
           </div>
 
           <div className="info-block">
             <Text>Build your knowledge with projects and experiment with different topics and media! You choose your pace and what interests you!</Text>
           </div>
           <div className="info-block">
-            <FullButton primary>Tutor + Buddy Portal</FullButton>
+            <FullButton primary={false}>Tutor + Buddy Portal</FullButton>
           </div>
-          
-         
-          <div className="button-boxes">
-            <div className="button-class">
-              <WideButton>{this.state.pathMsg}</WideButton>
-            </div>
-            <Wrapper>
-              <Title>{dummytext}</Title>
-            </Wrapper>
+          <div className="info-block">
+            <Text>Need a helping hand? No problem! Find a tutor for a quick question via chat or even find yourself a mentoring buddy to give you further advice. Choose your buddy based on interests you have in common and get a tutor based on the subject you have questions for.</Text>
           </div>
-          <div className="button-boxes">
-            <div className="button-class">
-              <WideButton>{this.state.pathMsg}</WideButton>
-            </div>
-            <Wrapper>
-              <Title>{dummytext}</Title>
-            </Wrapper>
+          <div className="info-block">
+            <FullButton primary={false}>Path Finder</FullButton>
           </div>
-          <div className="button-boxes">
-            <div className="button-class">
-              <WideButton>{this.state.pathMsg}</WideButton>
-            </div>
-            <Wrapper>
-              <Title>{dummytext}</Title>
-            </Wrapper>
-          </div>
-          <div className="icon-button">
-            <InoIconButton inoIcon="arrow_up" onClick={this.handleClick} />
+          <div style={{marginBottom:"3rem"}} className="info-block">
+            <Text>          No idea what career path you would like to pursue after school? No problem, we got you covered! Check out the paths we suggest to you based on your strengths and interests.</Text>
           </div>
         </ScrollPage>
       </div>

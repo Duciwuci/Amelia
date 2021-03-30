@@ -67,21 +67,6 @@
   font-style: italic;
 }
 
-.header-div {
-  position: fixed;
-  left: 2rem;
-}
-
-.button-div {
-  position: fixed;
-  right: 2rem;
-}
-
-.sign-in-button {
-  width: 8rem;
-  height: 4rem;
-}
-
 .headline-block {
   width: 350px;
   margin-left: 3rem;

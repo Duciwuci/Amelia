@@ -16,11 +16,12 @@ import {
   NormalHeader,
 } from "../shared/styles";
 import { ACarousel } from "../Carousel/Carousel";
+import { Header } from "../shared/components";
 class LandingPage extends Component {
   public render() {
     return (
       <div style={{ width: "100%", backgroundColor: BACKGROUND }}>
-        <Header />
+        <Header to="/dashboard" buttonName="LOG IN"/>
         <ScrollPage>
           <div className="carousel">
             <ACarousel
@@ -91,26 +92,5 @@ class LandingPage extends Component {
     );
   }
 }
-
-export const Header = () => {
-  return (
-    <div className="Header">
-      <div className="header-div">
-        <img alt="" src="../../../public/logo.svg" />
-      </div>
-      <div className="button-div">
-        <Link to="/dashboard">
-          <Button
-            variant="contained"
-            color="secondary"
-            className="sign-in-button"
-          >
-            LogIn
-          </Button>
-        </Link>
-      </div>
-    </div>
-  );
-};
 
 export default LandingPage;

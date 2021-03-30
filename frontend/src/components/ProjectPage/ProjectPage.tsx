@@ -8,6 +8,7 @@ import aleksandra from "./ProjectPageImages/aleksandra.jpg";
 import success from "./ProjectPageImages/success.jpg";
 import "./ProjectPage.css";
 import { SmallTextfield, WideButton, WideTextfield } from "../shared/styles";
+import { Header } from "../shared/components";
 
 export const ProjectPage = () => {
   useWindowSize();
@@ -18,7 +19,7 @@ export const ProjectPage = () => {
   const box4Ref = useRef(null);
   return (
     <div>
-      <Header />
+      <Header to="/" buttonName="LOG OUT"/>
       {curtinIsOpen && (
         <div
           style={{
@@ -137,22 +138,6 @@ const ImgTxtItem = (props: ImgTxtProps) => {
           style={{ width: "100%", height: "auto" }}
         ></img>
       )}
-    </div>
-  );
-};
-
-export const Header = () => {
-  return (
-    <div className="Header">
-      <div></div>
-      <div className="header-div">
-        <span className="header-title">Amelia</span>
-        <br />
-        <span className="header-text">Telling Stories to Learn ...</span>
-      </div>
-      <div className="button-div">
-        <button className="sign-in-button">LogIn</button>
-      </div>
     </div>
   );
 };

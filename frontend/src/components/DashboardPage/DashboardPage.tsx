@@ -10,6 +10,8 @@ import {
   NormalHugeHeader,
   FullButton,
 } from "../shared/styles";
+import { Header } from "../shared/components";
+
 
 import { Button } from "@material-ui/core";
 import { ApexChart } from "./DashboardGraphs/ProgressChart";
@@ -36,7 +38,7 @@ export default class Dashboard extends Component<DashboardProps> {
   public render() {
     return (
       <div style={{ backgroundColor: BACKGROUND }}>
-        <Header />
+        <Header to="/" buttonName="LOG OUT" />
         <ScrollPage>
           <div className="headline-block">
             <NormalHugeHeader>Welcome {this.props.username}!</NormalHugeHeader>
@@ -101,25 +103,3 @@ export default class Dashboard extends Component<DashboardProps> {
     );
   }
 }
-
-export const Header = () => {
-  return (
-    <div className="Header">
-      <div></div>
-      <div className="header-div">
-        <img alt="" src="../../../public/logo.svg" />
-      </div>
-      <div className="button-div">
-        <Link to="/">
-          <Button
-            className="sign-in-button"
-            variant="contained"
-            color="secondary"
-          >
-            Log Out
-          </Button>
-        </Link>
-      </div>
-    </div>
-  );
-};

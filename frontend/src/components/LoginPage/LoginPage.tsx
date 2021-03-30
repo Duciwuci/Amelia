@@ -29,7 +29,7 @@ export class LoginPage extends Component<Properties, State> {
       <div style={{ backgroundColor: BACKGROUND }}>
         <Header />
         <ScrollPage>
-          <img alt="" src={l4} alt="" className="first" />
+          <img alt="" src={l4} className="first" />
           <div className="flex-child">
             <form className="form-class">
               <h3>Sign In</h3>

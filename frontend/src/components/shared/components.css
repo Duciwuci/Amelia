@@ -5,12 +5,13 @@
   height: 7rem;
   background-color: blue;
   padding-top: 1.75rem;
-  z-index: 9999;
+  z-index: 9998;
 }
 
 .header-div {
   position: fixed;
   left: 2rem;
+  z-index: 9999;
 }
 
 .button-div {

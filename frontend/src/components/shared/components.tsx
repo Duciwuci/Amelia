@@ -1,7 +1,8 @@
 import "./components.css";
 import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
-
+import logo from "./images/anyolaLOGO.png";
+import {HeaderButton} from "./styles";
 interface HeaderProps {
   to: string;
   buttonName: string;
@@ -10,19 +11,14 @@ interface HeaderProps {
 export const Header = (props: HeaderProps) => {
   return (
     <div className="Header">
-      <div></div>
       <div className="header-div">
-        <img alt="" src="../../../public/logo.svg" />
+        <img alt="" src={logo} style={{width:"60px"}} />
       </div>
       <div className="button-div">
         <Link to={props.to}>
-          <Button
-            className="sign-in-button"
-            variant="contained"
-            color="secondary"
-          >
-            {props.buttonName}
-          </Button>
+          <HeaderButton>
+              {props.buttonName}
+          </HeaderButton>
         </Link>
       </div>
     </div>

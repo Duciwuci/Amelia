@@ -119,3 +119,12 @@ export const FullButton = styled.button<{ primary: boolean }>`
   height: 50px;
   border-radius: 5px;
 `;
+
+export const HeaderButton = styled.button`
+background: ${BUTTON_BLUE};
+border: 2px ${BUTTON_BLUE};
+color: black;
+padding: 0.25em 1em;
+width: 6rem;
+
+`

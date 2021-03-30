@@ -12,6 +12,12 @@ interface ACarouselProps {
   src7: string;
 }
 
+interface SmallCarouselProps {
+  src1: string;
+  src2: string;
+  src3: string;
+}
+
 export const ACarousel = (props: ACarouselProps) => {
   return (
     <CarouselProvider
@@ -47,7 +53,7 @@ export const ACarousel = (props: ACarouselProps) => {
   );
 };
 
-export const SmallCarousel = (props: ACarouselProps) => {
+export const SmallCarousel = (props: SmallCarouselProps) => {
   return (
     <div style={{height: "250px"}}>
       <CarouselProvider

@@ -52,14 +52,12 @@ export const Step4 = (): JSX.Element => {
         </div>
 
         <div style={{ margin: "auto", marginTop: "2rem" }}>
-          <Link to="/">
             <FullButton
               style={{ width: "200px", float: "left" }}
               primary={false}
             >
               DO
             </FullButton>
-          </Link>
         </div>
 
         <div style={{ margin: "auto", marginTop: "2rem", width: "350px" }}>
@@ -101,14 +99,12 @@ export const Step4 = (): JSX.Element => {
         </div>
 
         <div style={{ margin: "auto", marginTop: "2rem" }}>
-          <Link to="/">
             <FullButton
               style={{ width: "200px", float: "left" }}
               primary={true}
             >
               DON'T
             </FullButton>
-          </Link>
         </div>
 
         <div style={{ margin: "auto", marginTop: "2rem", width: "350px" }}>

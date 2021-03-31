@@ -10,6 +10,15 @@ import Dashboard from "./components/DashboardPage/DashboardPage";
 import { ProjectPage } from "./components/ProjectPage/ProjectPage";
 import { ACarousel } from "./components/Carousel/Carousel";
 import ProjectOverview from "./components/ProjectOverview/ProjectOverview";
+import {
+  Step1,
+  Step2,
+  Step3,
+  Step4,
+  Step5,
+  Step6,
+  Step7,
+} from "./components/ProjectPage/Steps";
 
 interface State {
   isLoggedIn: boolean;
@@ -37,6 +46,13 @@ class App extends React.Component<{}, State> {
           {!this.state.isLoggedIn && (
             <div>
               <Route exact path="/" component={LandingPage} />
+              <Route exact path="/step1" component={Step1} />
+              <Route exact path="/step2" component={Step2} />
+              <Route exact path="/step3" component={Step3} />
+              <Route exact path="/step4" component={Step4} />
+              <Route exact path="/step5" component={Step5} />
+              <Route exact path="/step6" component={Step6} />
+              <Route exact path="/step7" component={Step7} />
               <Route exact path="/story" component={StoryMap} />
               <Route
                 exact
@@ -45,7 +61,11 @@ class App extends React.Component<{}, State> {
               />
               <Route exact path="/project" component={ProjectPage} />
               <Route exact path="/carousel" component={ACarousel} />
-              <Route exact path="/projectoverview" component={ProjectOverview} />
+              <Route
+                exact
+                path="/projectoverview"
+                component={ProjectOverview}
+              />
               <Route
                 exact
                 path="/login"

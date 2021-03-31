@@ -13,7 +13,6 @@ import {
 import { Header } from "../shared/components";
 import { ApexChart } from "./DashboardGraphs/ProgressChart";
 
-
 interface DashboardProps {
   username: string;
 }

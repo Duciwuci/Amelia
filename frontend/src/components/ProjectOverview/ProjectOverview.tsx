@@ -13,27 +13,44 @@ export default class ProjectOverview extends React.Component {
   public render() {
     return (
       <div style={{ width: "100%", backgroundColor: BACKGROUND }}>
-        <Header to="/dashboard" buttonName="BACK"/>
+        <Header to="/dashboard" buttonName="BACK" />
         <ScrollPage>
-          <div style={{position:"fixed", height:"4rem", zIndex:9999, width:"100%", backgroundColor: BACKGROUND}}>
-          <NormalHeaderLeft>Project Portal</NormalHeaderLeft>
+          <div
+            style={{
+              position: "fixed",
+              height: "4rem",
+              zIndex: 9999,
+              width: "100%",
+              backgroundColor: BACKGROUND,
+            }}
+          >
+            <NormalHeaderLeft>Project Portal</NormalHeaderLeft>
           </div>
-        <div className="info-block">
-            <img src={amelia2} alt="" style={{ width: "320px", marginBottom: "2rem" }} />
-        </div>
+          <div className="info-block">
+            <img
+              src={amelia2}
+              alt=""
+              style={{ width: "320px", marginBottom: "2rem" }}
+            />
+          </div>
 
-        <div className="info-block">
-           <NormalHeaderLeft>Project Amelia</NormalHeaderLeft>
-           <br/>
-           <DoubleButton textLeft="ADD" toLeft="/projectoverview" textRight="START" toRight="/project"/>
-           <br />
-        </div>
-        
-        <div className="info-block">
-           <NormalHeaderLeft>My List:</NormalHeaderLeft>
-            <SmallCarousel 
-              src1={qp1} 
-              src2={qpng2} 
+          <div className="info-block">
+            <NormalHeaderLeft>Project Amelia</NormalHeaderLeft>
+            <br />
+            <DoubleButton
+              textLeft="ADD"
+              toLeft="/projectoverview"
+              textRight="START"
+              toRight="/project"
+            />
+            <br />
+          </div>
+
+          <div className="info-block">
+            <NormalHeaderLeft>My List:</NormalHeaderLeft>
+            <SmallCarousel
+              src1={qp1}
+              src2={qpng2}
               src3={qpng3}
               src4={qpng4}
               src5={qpng6}
@@ -41,10 +58,10 @@ export default class ProjectOverview extends React.Component {
           </div>
 
           <div className="info-block">
-           <NormalHeaderLeft>Currently Popular Projects:</NormalHeaderLeft>
-            <SmallCarousel 
+            <NormalHeaderLeft>Currently Popular Projects:</NormalHeaderLeft>
+            <SmallCarousel
               src1={qpng4}
-              src2={qp1} 
+              src2={qp1}
               src3={qpng3}
               src4={qpng2}
               src5={qpng6}
@@ -52,16 +69,15 @@ export default class ProjectOverview extends React.Component {
           </div>
 
           <div className="info-block">
-           <NormalHeaderLeft>Projects you might like:</NormalHeaderLeft>
-            <SmallCarousel 
+            <NormalHeaderLeft>Projects you might like:</NormalHeaderLeft>
+            <SmallCarousel
               src1={qpng6}
-              src2={qp1} 
+              src2={qp1}
               src3={qpng3}
               src4={qpng2}
               src5={qpng4}
             />
           </div>
-        
         </ScrollPage>
       </div>
     );

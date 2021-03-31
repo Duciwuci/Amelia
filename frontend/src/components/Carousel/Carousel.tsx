@@ -59,29 +59,49 @@ export const SmallCarousel = (props: SmallCarouselProps) => {
   return (
     <div style={{}}>
       <CarouselProvider
-      naturalSlideWidth={100}
-      naturalSlideHeight={100}
-      totalSlides={5}
-      infinite={true}
-    >
-      <Slider>
-        <Slide index={0}>
-          <Image style={{height: "250px"}} src={props.src1} hasMasterSpinner={true} />
-        </Slide>
-        <Slide index={1}>
-          <Image style={{height: "250px"}} src={props.src2} hasMasterSpinner={true} />
-        </Slide>
-        <Slide index={2}>
-          <Image style={{height: "250px"}} src={props.src3} hasMasterSpinner={true} />
-        </Slide>
-        <Slide index={3}>
-          <Image style={{height: "250px"}} src={props.src4} hasMasterSpinner={true} />
-        </Slide>
-        <Slide index={4}>
-          <Image style={{height: "250px"}} src={props.src5} hasMasterSpinner={true} />
-        </Slide>
-      </Slider>
-    </CarouselProvider>
+        naturalSlideWidth={100}
+        naturalSlideHeight={100}
+        totalSlides={5}
+        infinite={true}
+      >
+        <Slider>
+          <Slide index={0}>
+            <Image
+              style={{ height: "250px" }}
+              src={props.src1}
+              hasMasterSpinner={true}
+            />
+          </Slide>
+          <Slide index={1}>
+            <Image
+              style={{ height: "250px" }}
+              src={props.src2}
+              hasMasterSpinner={true}
+            />
+          </Slide>
+          <Slide index={2}>
+            <Image
+              style={{ height: "250px" }}
+              src={props.src3}
+              hasMasterSpinner={true}
+            />
+          </Slide>
+          <Slide index={3}>
+            <Image
+              style={{ height: "250px" }}
+              src={props.src4}
+              hasMasterSpinner={true}
+            />
+          </Slide>
+          <Slide index={4}>
+            <Image
+              style={{ height: "250px" }}
+              src={props.src5}
+              hasMasterSpinner={true}
+            />
+          </Slide>
+        </Slider>
+      </CarouselProvider>
     </div>
   );
 };

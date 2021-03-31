@@ -16,15 +16,20 @@ export const Wrapper = styled.section`
 `;
 
 export const SmallTextfield = styled.text`
-  border: 1px solid;
+  font-family: ‘Shadows Into Light Two’, cursive;
   height: 100%;
   text-align: center;
   width: 50%;
-  margin: auto;
-  color: palevioletred;
+  color: black;
+  background-color: #ffa07a;
+  opacity: 0.7;
   padding: 0.25em 1em;
   border-radius: 8px;
   font-size: 2.6vw;
+`;
+
+export const SmallTextWrapper = styled.div`
+  margin: auto;
 `;
 
 export const WideTextfield = styled.text`
@@ -131,18 +136,20 @@ export const FullButton = styled.button<{ primary: boolean }>`
 `;
 
 export const HeaderButton = styled.button`
-background: ${BUTTON_BLUE};
-border: 2px ${BUTTON_BLUE};
-color: black;
-padding: 0.25em 1em;
-width: 6rem;
-`
+  background: ${BUTTON_BLUE};
+  border: 2px ${BUTTON_BLUE};
+  color: black;
+  padding: 0.25em 1em;
+  width: 7rem;
+  height: 4rem;
+  border-radius: 5px;
+`;
 
 export const DButtonSmall = styled.button`
   background: ${BUTTON_BLUE};
   color: black;
   border: none;
-  padding: .3rem 2rem;
+  padding: 0.3rem 2rem;
   box-shadow: 1px 1px 1px grey;
 `;
 
@@ -150,8 +157,6 @@ export const DButtonBig = styled.button`
   background: ${BUTTON_RED};
   color: white;
   border: none;
-  padding: .3rem 4rem;
+  padding: 0.3rem 4rem;
   box-shadow: 1px 1px 1px grey;
-
 `;
-

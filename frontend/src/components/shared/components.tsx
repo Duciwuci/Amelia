@@ -1,7 +1,7 @@
 import "./components.css";
 import { Link } from "react-router-dom";
 import logo from "./images/anyolaLOGO.png";
-import {DButtonBig, DButtonSmall, HeaderButton} from "./styles";
+import { DButtonBig, DButtonSmall, HeaderButton } from "./styles";
 import React from "react";
 interface HeaderProps {
   to: string;
@@ -12,13 +12,11 @@ export const Header = (props: HeaderProps) => {
   return (
     <div className="Header">
       <div className="header-div">
-        <img alt="" src={logo} style={{width:"60px"}} />
+        <img alt="" src={logo} style={{ width: "60px" }} />
       </div>
       <div className="button-div">
         <Link to={props.to}>
-          <HeaderButton>
-              {props.buttonName}
-          </HeaderButton>
+          <HeaderButton>{props.buttonName}</HeaderButton>
         </Link>
       </div>
     </div>
@@ -27,11 +25,11 @@ export const Header = (props: HeaderProps) => {
 
 interface DButtonProps {
   textLeft: string;
-  toLeft: string
+  toLeft: string;
   textRight: string;
-  toRight: string
+  toRight: string;
 }
-export const DoubleButton =(props: DButtonProps) => {
+export const DoubleButton = (props: DButtonProps) => {
   return (
     <div className="doubleButton">
       <Link to={props.toLeft}>
@@ -41,5 +39,5 @@ export const DoubleButton =(props: DButtonProps) => {
         <DButtonBig>{props.textRight}</DButtonBig>
       </Link>
     </div>
-  )
-}
+  );
+};

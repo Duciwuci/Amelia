@@ -23,3 +23,10 @@
   width: 8rem;
   height: 4rem;
 }
+
+.doubleButton{
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin: 4px 16px 4px 16px;
+}

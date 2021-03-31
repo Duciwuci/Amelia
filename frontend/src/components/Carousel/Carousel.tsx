@@ -16,6 +16,8 @@ interface SmallCarouselProps {
   src1: string;
   src2: string;
   src3: string;
+  src4: string;
+  src5: string;
 }
 
 export const ACarousel = (props: ACarouselProps) => {
@@ -55,13 +57,12 @@ export const ACarousel = (props: ACarouselProps) => {
 
 export const SmallCarousel = (props: SmallCarouselProps) => {
   return (
-    <div style={{height: "250px"}}>
+    <div style={{}}>
       <CarouselProvider
-      naturalSlideWidth={0}
-      naturalSlideHeight={0}
-      totalSlides={3}
+      naturalSlideWidth={100}
+      naturalSlideHeight={100}
+      totalSlides={5}
       infinite={true}
-      isIntrinsicHeight={true}
     >
       <Slider>
         <Slide index={0}>
@@ -72,6 +73,12 @@ export const SmallCarousel = (props: SmallCarouselProps) => {
         </Slide>
         <Slide index={2}>
           <Image style={{height: "250px"}} src={props.src3} hasMasterSpinner={true} />
+        </Slide>
+        <Slide index={3}>
+          <Image style={{height: "250px"}} src={props.src4} hasMasterSpinner={true} />
+        </Slide>
+        <Slide index={4}>
+          <Image style={{height: "250px"}} src={props.src5} hasMasterSpinner={true} />
         </Slide>
       </Slider>
     </CarouselProvider>

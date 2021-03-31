@@ -21,7 +21,7 @@ class App extends React.Component<{}, State> {
     super({});
     this.state = {
       isLoggedIn: false,
-      username: "Shakira",
+      username: "Jaques",
     };
     this.login = this.login.bind(this);
   }

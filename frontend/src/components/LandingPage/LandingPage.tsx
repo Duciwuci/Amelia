@@ -36,7 +36,12 @@ import {
 } from "../shared/styles";
 import { ACarousel } from "../Carousel/Carousel";
 import { Header } from "../shared/components";
+
+
+
 class LandingPage extends Component {
+
+
   public render() {
     return (
       <div style={{ width: "100%", backgroundColor: BACKGROUND }}>

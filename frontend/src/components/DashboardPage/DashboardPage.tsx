@@ -11,10 +11,8 @@ import {
   FullButton,
 } from "../shared/styles";
 import { Header } from "../shared/components";
-
-
-import { Button } from "@material-ui/core";
 import { ApexChart } from "./DashboardGraphs/ProgressChart";
+
 
 interface DashboardProps {
   username: string;
@@ -60,7 +58,7 @@ export default class Dashboard extends Component<DashboardProps> {
               great! “Education is the most powerful weapon which you can use to
               change the world”
             </p>
-            <p className="citate">Nelson Mandela</p>
+            <p className="citate">- Nelson Mandela</p>
           </div>
 
           <div className="info-block">

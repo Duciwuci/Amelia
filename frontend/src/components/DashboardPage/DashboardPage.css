@@ -78,5 +78,7 @@
 .chart-block {
   width: 300px;
   margin: auto;
+  border: black 2pt;
   margin-top: 2rem;
+  margin-bottom: 1rem;
 }

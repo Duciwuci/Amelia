@@ -1,8 +1,8 @@
 import "./components.css";
-import { Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import logo from "./images/anyolaLOGO.png";
-import {HeaderButton} from "./styles";
+import {DButtonBig, DButtonSmall, HeaderButton} from "./styles";
+import React from "react";
 interface HeaderProps {
   to: string;
   buttonName: string;
@@ -24,3 +24,22 @@ export const Header = (props: HeaderProps) => {
     </div>
   );
 };
+
+interface DButtonProps {
+  textLeft: string;
+  toLeft: string
+  textRight: string;
+  toRight: string
+}
+export const DoubleButton =(props: DButtonProps) => {
+  return (
+    <div className="doubleButton">
+      <Link to={props.toLeft}>
+        <DButtonSmall>{props.textLeft}</DButtonSmall>
+      </Link>
+      <Link to={props.toRight}>
+        <DButtonBig>{props.textRight}</DButtonBig>
+      </Link>
+    </div>
+  )
+}

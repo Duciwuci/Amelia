@@ -106,14 +106,23 @@ export const NormalHeader = styled.h3`
   font-family: ‘Shadows Into Light Two’, cursive;
 `;
 
-export const NormalHugeHeader = styled.h1`
+export const NormalHeaderLeft = styled.h3`
   font-family: ‘Shadows Into Light Two’, cursive;
+  text-align: left;
+  margin-left: 1rem;
+`;
+
+export const NormalHugeHeader = styled.h2`
+  font-family: ‘Shadows Into Light Two’, cursive;
+  font-size: 1.5rem;
 `;
 
 export const FullButton = styled.button<{ primary: boolean }>`
   background: ${(props) => (props.primary ? BUTTON_RED : BUTTON_BLUE)};
   color: ${(props) => (props.primary ? "white" : "black")};
   font-family: ‘Shadows Into Light Two’, cursive;
+  font-size: 1rem;
+  font-weight: 100;
   border: none;
   width: 350px;
   height: 50px;
@@ -126,5 +135,22 @@ border: 2px ${BUTTON_BLUE};
 color: black;
 padding: 0.25em 1em;
 width: 6rem;
-
 `
+
+export const DButtonSmall = styled.button`
+  background: ${BUTTON_BLUE};
+  color: black;
+  border: none;
+  padding: .3rem 2rem;
+  box-shadow: 1px 1px 1px grey;
+`;
+
+export const DButtonBig = styled.button`
+  background: ${BUTTON_RED};
+  color: white;
+  border: none;
+  padding: .3rem 4rem;
+  box-shadow: 1px 1px 1px grey;
+
+`;
+

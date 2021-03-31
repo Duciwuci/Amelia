@@ -19,6 +19,7 @@ import {
   Step6,
   Step7,
 } from "./components/ProjectPage/Steps";
+import ScrollToTop from "./ScrollToTop";
 
 interface State {
   isLoggedIn: boolean;
@@ -45,6 +46,7 @@ class App extends React.Component<{}, State> {
         <Switch>
           {!this.state.isLoggedIn && (
             <div>
+              <ScrollToTop />
               <Route exact path="/" component={LandingPage} />
               <Route exact path="/step1" component={Step1} />
               <Route exact path="/step2" component={Step2} />

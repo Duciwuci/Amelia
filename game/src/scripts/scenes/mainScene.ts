@@ -48,7 +48,7 @@ export default class MainScene extends Phaser.Scene {
     //Add Line for better understanding
     //this.directionLine = new Phaser.Geom.LINE(this.amelia.x,this.amelia.y,-100,0,100,0,0x000000,0.7)
     this.directionLine = new DirectionLine(this,this.amelia,this.equation,100).setOrigin(0, 0)
-
+    this.directionLine.update()
     //Display Text Stuff
     this.add.text(this.cameras.main.width / 2, this.cameras.main.height * 0.1-50, "Play and Pause at any time",
     {color: '#000000',

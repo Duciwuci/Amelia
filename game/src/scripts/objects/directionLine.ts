@@ -6,7 +6,7 @@ export default class DirectionLine extends Phaser.GameObjects.Line {
     player: Amelia
     equation: Equation    
     constructor(scene, player:Amelia, equation:Equation, length:number) {
-        super(scene,0,0, player.x, player.y, player.x +50, player.y+50,0x000000,0.7)
+        super(scene,0,0, player.x, player.y, player.x + length, player.y,0x000000,0.7)
         scene.add.existing(this)
         this.player = player
         this.equation = equation

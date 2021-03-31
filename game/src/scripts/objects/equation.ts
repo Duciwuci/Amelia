@@ -9,6 +9,7 @@ export default class Equation extends Phaser.GameObjects.Text {
       scene.add.existing(this)
       this.setOrigin(0)
       this.slope = 0
+      this.flight_angle = Math.atan(this.slope)
       this.default_delta = 0.25
     }
     

@@ -110,6 +110,7 @@ export const NormalHeaderLeft = styled.h3`
   font-family: ‘Shadows Into Light Two’, cursive;
   text-align: left;
   margin-left: 1rem;
+  top: 10px;
 `;
 
 export const NormalHugeHeader = styled.h2`

@@ -7,8 +7,9 @@ import nikola from "./ProjectPageImages/nikola.jpg";
 import aleksandra from "./ProjectPageImages/aleksandra.jpg";
 import success from "./ProjectPageImages/success.jpg";
 import "./ProjectPage.css";
-import { SmallTextfield, WideButton, WideTextfield } from "../shared/styles";
+import { BACKGROUND, DButtonBig, ScrollPage, SmallTextfield, WideButton, WideTextfield } from "../shared/styles";
 import { Header } from "../shared/components";
+import { Curtain } from "./curtain/curtain";
 
 export const ProjectPage = () => {
   useWindowSize();
@@ -18,7 +19,7 @@ export const ProjectPage = () => {
   const box3Ref = useRef(null);
   const box4Ref = useRef(null);
   return (
-    <div>
+    <div style={{ backgroundColor: BACKGROUND }}>
       <Header to="/" buttonName="LOG OUT" />
       {curtinIsOpen && (
         <div
@@ -30,10 +31,10 @@ export const ProjectPage = () => {
             zIndex: 9999,
           }}
         >
-          <button onClick={() => setCurtinIsOpen(false)}>Click Me</button>
+          <Curtain update={setCurtinIsOpen}/>
         </div>
       )}
-
+      <ScrollPage>
       <div className="flex-column">
         <div className="motherBox">
           <ImgTxtItem
@@ -105,6 +106,8 @@ export const ProjectPage = () => {
           color="rgba(75, 109, 70, 0.5)"
         />
       </div>
+      </ScrollPage>
+      
     </div>
   );
 };

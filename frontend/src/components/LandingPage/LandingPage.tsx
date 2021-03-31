@@ -278,7 +278,7 @@ class LandingPage extends Component {
             <Link to="dashboard">
               <Button
                 variant="contained"
-                color="secondary"
+                color="default"
                 className="sign-in-button"
               >
                 LogIn

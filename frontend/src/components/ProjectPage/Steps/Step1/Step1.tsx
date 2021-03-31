@@ -3,10 +3,12 @@ import {
   FullButton,
   NormalHeaderLeft,
   ScrollPage,
+  Text,
 } from "../../../shared/styles";
 import { Header } from "../../../shared/components";
 import amg1 from "./Am1.png";
 import { Link } from "react-router-dom";
+import YouTube from "react-youtube";
 
 export const Step1 = (): JSX.Element => {
   return (
@@ -31,11 +33,33 @@ export const Step1 = (): JSX.Element => {
           />
         </div>
 
+        <div style={{ margin: "auto", marginTop: "2rem", width: "350px" }}>
+          <Text>
+            Let's begin our journey with Amelia while getting to know
+            mathematical functions! Watch the following animation to complete
+            this subprojects!
+          </Text>
+        </div>
+
+        <div style={{ margin: "auto", marginTop: "2rem", width: "350px" }}>
+          <YouTube videoId="JnNrxoxkg20" opts={{ width: "350px" }} />
+        </div>
+
+        <div style={{ margin: "auto", marginTop: "2rem", width: "350px" }}>
+          <Text>
+            Have you finished? Let's move on to the next subproject then:
+          </Text>
+        </div>
+
         <div style={{ margin: "auto", marginTop: "2rem" }}>
           <Link to="/step2">
             <FullButton primary={true}>NEXT SUBPROJECT</FullButton>
           </Link>
         </div>
+
+        <br />
+        <br />
+        <br />
       </ScrollPage>
     </div>
   );

@@ -44,23 +44,23 @@ export const Step3 = (): JSX.Element => {
         </div>
 
         <div style={{ margin: "auto", marginTop: "2rem", width: "350px" }}>
-          <YouTube videoId="MnGT1r5Pvcw" opts={{ width: "350px" }} />
+          <YouTube videoId="zAxT0mRGuoY" opts={{ width: "350px" }} />
         </div>
 
         <div style={{ margin: "auto", marginTop: "2rem", width: "350px" }}>
-          <YouTube videoId="75m60SxFfJg" opts={{ width: "350px" }} />
+          <YouTube videoId="dzrwnwOx0fw" opts={{ width: "350px" }} />
         </div>
 
         <div style={{ margin: "auto", marginTop: "2rem", width: "350px" }}>
-          <YouTube videoId="4jLSdbTc2fg" opts={{ width: "350px" }} />
+          <YouTube videoId="yr1xnYUmmWE" opts={{ width: "350px" }} />
         </div>
 
         <div style={{ margin: "auto", marginTop: "2rem", width: "350px" }}>
-          <YouTube videoId="8eXb-6wQUks" opts={{ width: "350px" }} />
+          <YouTube videoId="ZQElzjCsl9o" opts={{ width: "350px" }} />
         </div>
 
         <div style={{ margin: "auto", marginTop: "2rem", width: "350px" }}>
-          <YouTube videoId="zkvYpT0JJB8" opts={{ width: "350px" }} />
+          <YouTube videoId="PMerSm2ToFY" opts={{ width: "350px" }} />
         </div>
 
         <div style={{ margin: "auto", marginTop: "2rem", width: "350px" }}>

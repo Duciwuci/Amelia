@@ -7,9 +7,9 @@ import {
 } from "../../../shared/styles";
 import { Header } from "../../../shared/components";
 import amg7 from "./Am7.png";
+import route from "./route.png"
 import { Link } from "react-router-dom";
 import task7 from "./Am7_task.png";
-import route from "./Am7.png";
 import YouTube from "react-youtube";
 
 export const Step7 = (): JSX.Element => {

@@ -9,6 +9,7 @@ import { Header } from "../../../shared/components";
 import amg7 from "./Am7.png";
 import { Link } from "react-router-dom";
 import task7 from "./Am7_task.png";
+import route from "./Am7.png";
 import YouTube from "react-youtube";
 
 export const Step7 = (): JSX.Element => {
@@ -69,7 +70,7 @@ export const Step7 = (): JSX.Element => {
         </div>
 
         <div style={{ margin: "auto", marginTop: "2rem", width: "350px" }}>
-          IMAGE ROUTE HERE
+          <img width="350px" alt="" src={route} />
         </div>
 
         <div style={{ margin: "auto", marginTop: "2rem", width: "350px" }}>

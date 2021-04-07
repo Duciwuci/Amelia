@@ -16,7 +16,7 @@ export const Wrapper = styled.section`
 `;
 
 export const SmallTextfield = styled.text`
-  font-family: ‘Shadows Into Light Two’, cursive;
+  font-family: 'Shadows Into Light Two', cursive;
   height: 100%;
   text-align: center;
   width: 50%;
@@ -70,10 +70,8 @@ export const BUTTON_BLUE = "#CCF5E9";
 export const Header = styled.div`
   background: linear-gradient(
     90deg,
-    rgba(255, 63, 70, 1) 9%,
-    rgba(247, 113, 3, 1) 29%,
-    rgba(255, 63, 70, 1) 50%,
-    rgba(255, 72, 94, 1) 100%
+    rgba(253,61,87,1) 37%,
+    rgba(248,156,49,1) 100%
   );
 `;
 export const ScrollPage = styled.div`
@@ -84,49 +82,48 @@ export const ScrollPage = styled.div`
 `;
 
 export const MainHeaderBackground = styled.div`
-  background: linear-gradient(
-    90deg,
-    rgba(255, 63, 70, 1) 9%,
-    rgba(247, 113, 3, 1) 29%,
-    rgba(255, 63, 70, 1) 50%,
-    rgba(255, 72, 94, 1) 100%
-  );
+  background: #ff3f46;
   width: 350px;
+  height: 45px;
   text-align: center;
+  margin-top: 30px;
+  margin-left: 5px;
+  display: table-cell;
+  vertical-align: middle;
 `;
 
 export const MainHeader = styled.h3`
-  font-family: ‘Shadows Into Light Two’, cursive;
-  color: white;
+  font-family: 'Shadows Into Light Two', cursive;
+  color: #f9f5f1;
   font-size: 1.2rem;
 `;
 
 export const Text = styled.p`
-  font-family: ‘Source Sans Pro’, sans-serif;
+  font-family: 'Source Sans Pro', sans-serif;
   text-align: justify;
   color: #707070;
 `;
 
 export const NormalHeader = styled.h3`
-  font-family: ‘Shadows Into Light Two’, cursive;
+  font-family: 'Shadows Into Light Two', cursive;
 `;
 
 export const NormalHeaderLeft = styled.h3`
-  font-family: ‘Shadows Into Light Two’, cursive;
+  font-family: 'Shadows Into Light Two', cursive;
   text-align: left;
   margin-left: 1rem;
   top: 10px;
 `;
 
 export const NormalHugeHeader = styled.h2`
-  font-family: ‘Shadows Into Light Two’, cursive;
+  font-family: 'Shadows Into Light Two', cursive;
   font-size: 1.5rem;
 `;
 
 export const FullButton = styled.button<{ primary: boolean }>`
   background: ${(props) => (props.primary ? BUTTON_RED : BUTTON_BLUE)};
   color: ${(props) => (props.primary ? "white" : "black")};
-  font-family: ‘Shadows Into Light Two’, cursive;
+  font-family: 'Shadows Into Light Two', cursive;
   font-size: 1rem;
   font-weight: 100;
   border: none;

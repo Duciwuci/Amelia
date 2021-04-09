@@ -13,7 +13,7 @@ export const Curtain = (props: CurtainProps) => {
                     <img
                         src={amelia2}
                         alt=""
-                        style={{width: 320, marginBottom: 10}}
+                        style={{width: 320, marginBottom: 13, marginTop: '1.5rem'}}
                     />
                     <FullButton style={{marginBottom: 15}} primary={true} onClick={() => props.update(false)}>
                         Project Amelia

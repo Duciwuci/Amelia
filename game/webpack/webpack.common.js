@@ -31,7 +31,7 @@ module.exports = {
   },
   plugins: [
     new webpack.ProgressPlugin(),
-    new HtmlWebpackPlugin({ gameName: 'Amelia Flight over Atlantic', template: 'src/index.html' }),
+    new HtmlWebpackPlugin({ gameName: 'The flight over the atlantic', template: 'src/index.html' }),
     new CopyWebpackPlugin({
       patterns: [
         { from: 'src/assets', to: 'assets' },

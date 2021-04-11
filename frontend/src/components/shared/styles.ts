@@ -32,31 +32,6 @@ export const SmallTextWrapper = styled.div`
   margin: auto;
 `;
 
-export const WideTextfield = styled.text`
-  color: palevioletred;
-  font-size: 1.6vw;
-  text-align: center;
-  border: 1px solid;
-  height: 100%;
-  width: 100%;
-  margin: auto;
-  padding: 0.25em 1em;
-  border-radius: 8px;
-  display: block;
-`;
-
-export const WideButton = styled.button`
-  color: ff3f46;
-  font-size: 1em;
-  margin: 0 auto;
-  left: 50%;
-  display: block;
-  padding: 0.25em 1em;
-  border: 2px solid palevioletred;
-  border-radius: 3px;
-  width: 100%;
-`;
-
 // Create a Title component that'll render an <h1> tag with some styles
 export const Title = styled.h1`
   font-size: 2vw;
@@ -113,6 +88,14 @@ export const NormalHeaderLeft = styled.h3`
   text-align: left;
   margin-left: 1rem;
   top: 10px;
+`;
+
+export const NormalHeaderLeftProjectOverview = styled.h3`
+  font-family: 'Shadows Into Light Two', cursive;
+  text-align: left;
+  margin-left: 1rem;
+  top: 15px;
+  margin-top: 1rem;
 `;
 
 export const NormalHugeHeader = styled.h2`

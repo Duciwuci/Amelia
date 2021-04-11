@@ -1,10 +1,38 @@
 import React from "react";
-import { BACKGROUND, FullButton, Header, Text } from "../../shared/styles";
+import {BACKGROUND, FullButton, Text} from "../../shared/styles";
 import amelia2 from "../../ProjectOverview/OverviewImages/amelia2.png";
+import styled from "styled-components";
 
 interface CurtainProps {
-  update: (arg0: boolean) => void;
+    update: (arg0: boolean) => void;
 }
+
+const OuterContainer = styled.div`
+  position: fixed;
+  left: 0;
+  top: 7rem;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background: ${BACKGROUND};
+`;
+
+const InnerContainer = styled.div`
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+
+const AnotherContainer = styled.div`
+  width: 100%;
+  height: calc(100% - 7rem);
+  overflow: auto;
+`;
+
 export const Curtain = (props: CurtainProps) => {
     return (
         <OuterContainer>

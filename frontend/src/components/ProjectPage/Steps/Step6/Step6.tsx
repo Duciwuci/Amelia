@@ -59,9 +59,7 @@ export const Step6 = (): JSX.Element => {
         </div>
 
         <div style={{ margin: "auto", marginTop: "2rem" }}>
-          <Link to="/">
             <FullButton primary={true}>PLAY!</FullButton>
-          </Link>
         </div>
 
         <div style={{ margin: "auto", marginTop: "2rem", width: "350px" }}>

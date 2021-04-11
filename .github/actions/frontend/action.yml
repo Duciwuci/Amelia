@@ -3,3 +3,4 @@ description: 'To be sure it builds'
 runs:
   using: 'docker'
   image: '../../../frontend/Dockerfile'
+  arsg: ''

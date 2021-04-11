@@ -42,7 +42,7 @@ export const Step1 = (): JSX.Element => {
         </div>
 
         <div style={{ margin: "auto", marginTop: "2rem", width: "350px" }}>
-          <YouTube videoId="JnNrxoxkg20" opts={{ width: "350px" }} />
+          <YouTube videoId="lpqahDAy7Cs" opts={{ width: "350px" }} />
         </div>
 
         <div style={{ margin: "auto", marginTop: "2rem", width: "350px" }}>

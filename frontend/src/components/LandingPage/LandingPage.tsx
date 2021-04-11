@@ -246,7 +246,7 @@ class LandingPage extends Component {
           </div>
 
           <div className="video">
-            <YouTube videoId="6KvZ9v64pDQ" opts={{ width: "350px" }} />
+            <YouTube videoId="0b4C1zJmEWQ" opts={{ width: "350px" }} />
           </div>
 
           <div className="info-block">

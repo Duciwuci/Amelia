@@ -15,5 +15,5 @@ RUN npm run build
 # Application port (optional)
 EXPOSE 5000
 
-## Container start command
-CMD ["npm","run","serve"]
+## Container start command. Uncomment if you want to build locally.
+#CMD ["npm","run","serve"]

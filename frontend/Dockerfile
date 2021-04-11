@@ -16,5 +16,5 @@ RUN yarn global add serve
 # Application port (optional)
 EXPOSE 5000
 
-## Container start command. Uncomment when building locally
+## Container start command. Uncomment when building locally.
 #CMD ["serve","-s", "build"]

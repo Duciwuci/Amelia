@@ -1,7 +1,7 @@
 import React from "react";
-import { BACKGROUND, NormalHeaderLeft, ScrollPage } from "../shared/styles";
-import { DoubleButton, Header } from "../shared/components";
-import { SmallCarousel } from "../Carousel/Carousel";
+import {BACKGROUND, NormalHeaderLeft, NormalHeaderLeftProjectOverview, ScrollPage} from "../shared/styles";
+import {DoubleButton, Header} from "../shared/components";
+import {SmallCarousel} from "../Carousel/Carousel";
 import amelia2 from "./OverviewImages/amelia2.png";
 import qp1 from "./OverviewImages/qp1.png";
 import qpng2 from "./OverviewImages/qpng2.png";
@@ -24,7 +24,7 @@ export default class ProjectOverview extends React.Component {
               backgroundColor: BACKGROUND,
             }}
           >
-            <NormalHeaderLeft>Project Portal</NormalHeaderLeft>
+            <NormalHeaderLeftProjectOverview>Project Portal</NormalHeaderLeftProjectOverview>
           </div>
           <div className="info-block">
             <img

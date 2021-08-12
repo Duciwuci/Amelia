@@ -8,7 +8,7 @@ export default class GuiScene extends Phaser.Scene {
     create() {
     this.cameras.main.setBackgroundColor('#ffffff')
     this.add.sprite(0,0,'success').setOrigin(0,0)
-    this.add.text(50, this.cameras.main.height - 50, "Klicke zum Neustartennn", 
+    this.add.text(50, this.cameras.main.height - 50, "Klicke zum Neustarten", 
     {fontSize:'25px',
     color:'#ffffff',
     align:'right'

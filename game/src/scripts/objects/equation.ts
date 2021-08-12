@@ -5,7 +5,7 @@ export default class Equation extends Phaser.GameObjects.Text {
     default_delta: number
 
     constructor(scene) {
-      super(scene, 10, 10, 'Flight Equation: y=0*x', { color: 'black', fontSize: '32px' })
+      super(scene, 10, 10, 'Gleichung des Flugzeugs:\ny=0*x', { color: 'black', fontSize: '35px' })
       scene.add.existing(this)
       this.setOrigin(0)
       this.slope = 0
@@ -26,6 +26,6 @@ export default class Equation extends Phaser.GameObjects.Text {
     }
 
     update() {
-      this.setText(`Flight Equation: y=${this.slope}*x`)
+      this.setText(`Gleichung des Flugzeugs:\ny=${this.slope}*x`)
     }
   }

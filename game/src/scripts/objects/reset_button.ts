@@ -4,7 +4,7 @@ export default class ResetButton extends Phaser.Physics.Arcade.Sprite{
         scene.add.existing(this)
 
         this.setInteractive().on('pointerdown', () => {
-            let sure:boolean  = confirm("You are about to restart the game. \n You will loose any progress. Are you sure?")
+            let sure:boolean  = confirm("Willst du das Spiel wirklich neu starten?")
             if(sure) scene.scene.restart()
         })
         

@@ -50,20 +50,20 @@ export default class MainScene extends Phaser.Scene {
     this.directionLine = new DirectionLine(this,this.amelia,this.equation,100).setOrigin(0, 0)
     this.directionLine.update()
     //Display Text Stuff
-    this.add.text(this.cameras.main.width / 2, this.cameras.main.height * 0.1-50, "Play and Pause at any time",
+    this.add.text(this.cameras.main.width / 2, this.cameras.main.height * 0.1+50, "Start\n/Pause",
     {color: '#000000',
     fontSize: '15px',}
     ).setOrigin(0.5,0.5).setScrollFactor(0)
     
     this.add
-      .text(this.cameras.main.width - 15, 15, `Help Amelia to cross the atlantic\n by setting the equation of her plane\n\n Avoid stormy clouds and land \n safely on the other side`, {
+      .text(this.cameras.main.width - 15, 15, `Hilf Amelia den Atlantik zu überqueren\n Steuere ihr Flugzeug über die Gleichungen\n\n Meide Wolken und Bäume \n Lande sicher auf der anderen Seite`, {
         color: '#000000',
         fontSize: '22px',
         align: 'right'
       }).setScrollFactor(0)
       .setOrigin(1, 0)
       
-    this.add.text(this.cameras.main.width - 100, this.cameras.main.height - 65, 'Restart the flight', {
+    this.add.text(this.cameras.main.width - 100, this.cameras.main.height - 65, 'Neustart des Levels', {
       color: '#000000',
       fontSize: '15px'
     }).setOrigin(0.5,0.5)
